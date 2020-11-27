@@ -11,9 +11,9 @@ public class AppConf implements WebMvcConfigurer {
         registry.addMapping("/**")
                 .allowedOrigins("http://localhost:4200",
                         "http://192.168.3.132:8088",
-                        "http://f.ibcon.ru:8080",
-                        "http://f.ibcon.ru:4200",
-                        "http://f.ibcon.ru")
+                        "http://app.sssproject.ru:8080",
+//                        "http://f.ibcon.ru:4200",
+                        "http://app.sssproject.ru/")
                 .allowedMethods("GET", "POST");
     }
 }

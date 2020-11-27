@@ -14,7 +14,7 @@ public class UltramarServerApplication extends SpringBootServletInitializer {
 
     @Override
     protected SpringApplicationBuilder configure(SpringApplicationBuilder builder) {
-        return builder.sources(SpringApplication.class);
+        return builder.sources(UltramarServerApplication.class);
     }
 
 }
