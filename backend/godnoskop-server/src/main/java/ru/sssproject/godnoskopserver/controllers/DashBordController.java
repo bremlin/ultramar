@@ -20,7 +20,7 @@ public class DashBordController {
     @PostMapping("/getkeyprojectevents")
     public List<KeyProjectEventsDash> getKeyProjectEvents() {
         List<KeyProjectEventsDash> rows = new ArrayList<>();
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM widget_keyprojevents()");
             while (resultSet.next()) {
@@ -45,7 +45,7 @@ public class DashBordController {
     @PostMapping("/getsmrprogress")
     public List<SmrProgressDash> getSmrProgress() {
         List<SmrProgressDash> rows = new ArrayList<>();
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM widget_smrprogress()");
             while (resultSet.next()) {
@@ -67,7 +67,7 @@ public class DashBordController {
     @PostMapping("/getprojectprogressvolconstruct")
     public List<ProjectProgressVolumeConstruct> getProjectProgressVolumeConstruct() {
         List<ProjectProgressVolumeConstruct> rows = new ArrayList<>();
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM widget_projprogressvolconstruct()");
             while (resultSet.next()) {

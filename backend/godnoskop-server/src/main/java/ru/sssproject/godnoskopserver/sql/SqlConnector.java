@@ -11,9 +11,8 @@ public class SqlConnector {
             Class.forName("org.postgresql.Driver");
 
             switch (type) {
-                case Ultramar:
-                    return DriverManager.getConnection("jdbc:postgresql://" + "192.168.1.190:5432/umdb", "umpu", "HxLj309A2HCO");
-//            return DriverManager.getConnection("jdbc:postgresql://" + "f.ibcon.ru:1971/umdb", "umpu", "HxLj309A2HCO");
+                case Godnoskop:
+                    return DriverManager.getConnection("jdbc:postgresql://" + "134.209.84.32:5432/gorik", "postgrebremlin", "prostome");
             }
             return null;
         } catch (ClassNotFoundException | SQLException ex) {
@@ -23,6 +22,6 @@ public class SqlConnector {
     }
 
     public enum DB {
-        Ultramar
+        Godnoskop
     }
 }

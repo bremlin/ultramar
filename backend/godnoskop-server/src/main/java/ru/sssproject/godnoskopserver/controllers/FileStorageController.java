@@ -23,7 +23,7 @@ public class FileStorageController {
         System.out.println("getmedia: ");
         System.out.println("type: " + request.getType());
         List<UltraFile> ultraFileList = new ArrayList<>();
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM " +
                     "getdocsforparentbytypewithauthorastext(" + null + ", '" + request.getType() + "')");
@@ -38,7 +38,7 @@ public class FileStorageController {
     @PostMapping("/getfilesfortree")
     public List<UltraFile> getFiles(@Valid @RequestBody FileRequest request) {
         List<UltraFile> ultraFileList = new ArrayList<>();
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM " +
                     "getdocsforparentbytypewithauthorastext(" + request.getParentId() + ", 'doc')");
@@ -60,7 +60,7 @@ public class FileStorageController {
             ultraFile.setAuthor(resultSet.getString("doc_author"));
             ultraFile.setFile(!resultSet.getBoolean("is_folder"));
             ultraFile.setType(type);
-            try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+            try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
                 Statement stat = connection.createStatement();
                 ResultSet rs = stat.executeQuery("SELECT * FROM " +
                         "doc_attr_object_getobjectidbydocid(" + ultraFile.getId() + ")");
@@ -81,7 +81,7 @@ public class FileStorageController {
     @PostMapping("/getrootfortree")
     public List<UltraFile> getRoot() {
         List<UltraFile> ultraFileList = new ArrayList<>();
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM " +
                     "getdocsforparentbytypewithauthorastext(" + null + ", 'doc')");
@@ -95,7 +95,7 @@ public class FileStorageController {
     @PostMapping("/addfolder")
     public Integer addFolder(@Valid @RequestBody FileRequest request) {
         Integer id = null;
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             String query = "SELECT * FROM " +
                     "adddoc(" + request.getParentId() + ", " +
@@ -120,7 +120,7 @@ public class FileStorageController {
 
     @PostMapping("/removefolder")
     public void removeFolder(@Valid @RequestBody FileRequest request) {
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             String query = "SELECT * FROM " +
                     "deldocwithcilds(" + request.getId() + ")";

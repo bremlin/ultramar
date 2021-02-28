@@ -36,10 +36,10 @@ public class UploadController {
     private static String PHOTO = "photo";
     private static String VIDEO = "video";
 
-    @GetMapping("/")
-    public String index() {
-        return "upload";
-    }
+//    @GetMapping("/")
+//    public String index() {
+//        return "upload";
+//    }
 
     @PostMapping(value = "/upload", consumes = MediaType.MULTIPART_FORM_DATA_VALUE, produces = MediaType.APPLICATION_JSON_VALUE)
     public void singleFileUpload(@RequestParam("file") MultipartFile file,
@@ -58,7 +58,7 @@ public class UploadController {
         ultraFile.setDocName(name);
         ultraFile.setOrigName(file.getOriginalFilename());
 
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             String query = "SELECT * FROM " +
                     "adddoc(" + ultraFile.getParentid() + ", " +
@@ -102,7 +102,7 @@ public class UploadController {
 
         System.out.println("id: " + request.getId());
 
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM " +
                     "getdocfilenamesbyid(" + request.getId() + ")");
@@ -145,7 +145,7 @@ public class UploadController {
 
         System.out.println("id: " + request.getId());
 
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM " +
                     "getdocfilenamesbyid(" + request.getId() + ")");
@@ -205,7 +205,7 @@ public class UploadController {
 
         System.out.println("id: " + id);
 
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM " +
                     "getdocfilenamesbyid(" + id + ")");
@@ -256,7 +256,7 @@ public class UploadController {
         ultraFile.setDocName(name);
         ultraFile.setOrigName(file.getOriginalFilename());
 
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             String query = "SELECT * FROM " +
                     "adddocfileinroot('" + ultraFile.getDocName() + "', " +
@@ -298,7 +298,7 @@ public class UploadController {
     @PostMapping("/getrelation")
     public List<User> getRelation() {
         List<User> users = new ArrayList<>();
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM getusersexwithflags()");
             while (resultSet.next()) {

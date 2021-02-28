@@ -12,7 +12,6 @@ import ru.sssproject.godnoskopserver.requestmodel.DirectoryRequest;
 import ru.sssproject.godnoskopserver.requestmodel.RoleRequest;
 import ru.sssproject.godnoskopserver.requestmodel.UserRequest;
 import ru.sssproject.godnoskopserver.sql.SqlConnector;
-import ru.sssproject.godnoskopserver.objects.*;
 
 import javax.validation.Valid;
 import java.sql.Connection;
@@ -28,7 +27,7 @@ public class AdminController {
     @PostMapping("/getusers")
     public List<User> getUsers() {
         List<User> users = new ArrayList<>();
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM getusersexwithflags()");
             while (resultSet.next()) {
@@ -46,7 +45,7 @@ public class AdminController {
     @PostMapping("/getroles")
     public List<Role> getRoles() {
         List<Role> roles = new ArrayList<>();
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM getroles()");
             while (resultSet.next()) {
@@ -65,7 +64,7 @@ public class AdminController {
     public List<ActivityType> getActivityTypes() {
         //TODO при появлении функции добавить её
         List<ActivityType> types = new ArrayList<>();
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM getroles()");
             while (resultSet.next()) {
@@ -83,7 +82,7 @@ public class AdminController {
     @PostMapping("/getbuildings")
     public List<Building> getBuildings() {
         List<Building> buildings = new ArrayList<>();
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM ref_objects_get()");
             while (resultSet.next()) {
@@ -100,7 +99,7 @@ public class AdminController {
 
     @PostMapping("/addbuilding")
     public Integer addBuilding(@Valid @RequestBody DirectoryRequest request) {
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM " +
                     "ref_object_add('" + request.getCode() +
@@ -120,7 +119,7 @@ public class AdminController {
     public Boolean removeBuilding(@Valid @RequestBody DirectoryRequest request) {
         System.out.println("delbuilding: ");
         System.out.println("id: ");
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM ref_object_delbyid(" + request.getId() + ")");
             while (resultSet.next()) {
@@ -138,7 +137,7 @@ public class AdminController {
     public List<UnitOM> getUnitsOM() {
         //todo при появлении функции добавить её
         List<UnitOM> unitOMS = new ArrayList<>();
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM getroles()");
             while (resultSet.next()) {
@@ -155,7 +154,7 @@ public class AdminController {
 
     @PostMapping("/setrole")
     public Integer setRole(@Valid @RequestBody RoleRequest request) {
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM " +
                     "addroleuser(" + request.getUserId() + ", " +
@@ -173,7 +172,7 @@ public class AdminController {
 
     @PostMapping("/delroleuser")
     public Boolean removeRoleUser(@Valid @RequestBody RoleRequest request) {
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM " +
                     "delroleuser(" + request.getUserId() + ", " +
@@ -191,7 +190,7 @@ public class AdminController {
 
     @PostMapping("/deluser")
     public boolean delUser(@Valid @RequestBody UserRequest request) {
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM " + "deluser(" + request.getId() + ")");
             while (resultSet.next()) {
@@ -207,7 +206,7 @@ public class AdminController {
 
     @PostMapping("/adduser")
     public Integer addUser(@Valid @RequestBody UserRequest request) {
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM " +
                     "adduser('" + request.getLogin() + "', " +
@@ -227,7 +226,7 @@ public class AdminController {
 
     @PostMapping("/updateuser")
     public boolean updateUser(@Valid @RequestBody UserRequest request) {
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM " +
                     "updateuser(" + request.getId() + ", " +
@@ -248,7 +247,7 @@ public class AdminController {
 
     @PostMapping("/setpassword")
     public boolean setPassword(@Valid @RequestBody UserRequest request) {
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM " +
                     "userchangepassword(" + request.getId() + ", " +

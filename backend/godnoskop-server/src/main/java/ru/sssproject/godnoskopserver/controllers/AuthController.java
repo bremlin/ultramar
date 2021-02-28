@@ -20,20 +20,22 @@ public class AuthController {
     @PostMapping("/auth")
     public User getAuth(@Valid @RequestBody UserRequest request) {
         Integer userId = null;
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM " +
-                    "canLogin('" + request.getLogin() +
-                    "', '" + request.getPassword() + "')");
+            String tableName = "\"user\"";
+            String query = String.format("select id from %s where login = '%s' and pass = md5('%s')",
+                    tableName, request.getLogin(), request.getPassword());
+            ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()) {
                 userId = resultSet.getInt(1);
+                return new User(userId, request.getLogin());
             }
 
-            resultSet = statement.executeQuery("SELECT * FROM " +
-                    "getuserbyid(" + userId + ")");
-            while (resultSet.next()) {
-                return new User(userId, resultSet);
-            }
+//            String getUserQuery = String.format("select * from %s where id = %s", tableName, userId);
+//            resultSet = statement.executeQuery(getUserQuery);
+//            while (resultSet.next()) {
+//                return new User(userId, resultSet);
+//            }
             statement.close();
             resultSet.close();
         } catch (SQLException e) {
@@ -45,16 +47,16 @@ public class AuthController {
     @PostMapping("/getrole")
     public List<Role> getRole(@Valid @RequestBody RoleRequest request) {
         List<Role> roleList = new ArrayList<>();
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        String tableName = "\"user_roles\"";
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
-            ResultSet resultSet = statement.executeQuery("SELECT * FROM " +
-                    "getrolebyuserid('" + request.getId() + "')");
+            String query = String.format("SELECT role_id from %s where user_id = %s", tableName, request.getId());
+            ResultSet resultSet = statement.executeQuery(query);
             while (resultSet.next()) {
-                Array array = resultSet.getArray(1);
-                Integer[] intArray = (Integer[]) array.getArray();
-                for (Integer integer : intArray) {
-                    roleList.add(new Role(integer));
-                }
+                roleList.add(new Role(resultSet.getInt(1)));
+            }
+            for (Role role : roleList) {
+                System.out.println("role: " + role.getId());
             }
             statement.close();
             resultSet.close();

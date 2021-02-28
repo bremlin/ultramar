@@ -10,10 +10,12 @@ public class AppConf implements WebMvcConfigurer {
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
                 .allowedOrigins("http://localhost:4200",
-                        "http://192.168.3.132:8088",
-                        "http://app.sssproject.ru:8080",
+                        "http://localhost:8080",
+                        "http://godnoskop.sssproject.ru/",
+                        "http://godnoskop.sssproject.ru:4200",
+                        "http://godnoskop.sssproject.ru:8080/",
 //                        "http://f.ibcon.ru:4200",
-                        "http://app.sssproject.ru/")
+                        "http://app.sssproject.ru:8080/")
                 .allowedMethods("GET", "POST");
     }
 }

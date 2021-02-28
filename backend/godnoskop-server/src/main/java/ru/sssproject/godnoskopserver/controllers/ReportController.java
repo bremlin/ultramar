@@ -19,7 +19,7 @@ public class ReportController {
     @PostMapping("/getinvestreport")
     public List<InvestReportObject> getRows() {
         List<InvestReportObject> rows = new ArrayList<>();
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM rep_sumforinvest()");
             while (resultSet.next()) {
@@ -47,7 +47,7 @@ public class ReportController {
     @PostMapping("/getsumstructure")
     public List<ReportSumStructure> getSumStructureReport() {
         List<ReportSumStructure> rows = new ArrayList<>();
-        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Ultramar)) {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
             Statement statement = connection.createStatement();
             ResultSet resultSet = statement.executeQuery("SELECT * FROM rep_sumonstruct()");
             while (resultSet.next()) {

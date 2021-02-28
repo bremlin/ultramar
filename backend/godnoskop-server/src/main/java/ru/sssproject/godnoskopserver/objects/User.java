@@ -10,29 +10,24 @@ public class User extends ResponseObject{
     private String login;
     private String password;
     private String name;
-    private String surname;
-
-    private boolean firstFlag;
 
     public User(Integer id, String login) {
         this.id = id;
         this.login = login;
+        this.name = login;
+
     }
 
     public User(ResultSet rs) throws SQLException {
-        this.id = rs.getInt("user_id");
-        this.login = rs.getString("user_login");
-        this.name = rs.getString("user_name");
-        this.surname = rs.getString("user_surname");
-        this.firstFlag = rs.getBoolean("first_flag");
+        this.id = rs.getInt("id");
+        this.login = rs.getString("login");
+        this.name = rs.getString("name");
     }
 
     public User(Integer id, ResultSet rs) throws SQLException {
         this.id = id;
-        this.login = rs.getString("user_login");
-        this.name = rs.getString("user_name");
-        this.surname = rs.getString("user_surname");
-        this.firstFlag = rs.getBoolean("first_flag");
+        this.login = rs.getString("login");
+        this.name = rs.getString("name");
     }
 
     public Integer getId() {
@@ -67,19 +62,4 @@ public class User extends ResponseObject{
         this.name = name;
     }
 
-    public String getSurname() {
-        return surname;
-    }
-
-    public void setSurname(String surname) {
-        this.surname = surname;
-    }
-
-    public boolean isFirstFlag() {
-        return firstFlag;
-    }
-
-    public void setFirstFlag(boolean firstFlag) {
-        this.firstFlag = firstFlag;
-    }
 }
