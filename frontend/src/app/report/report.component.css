@@ -1,0 +1,63 @@
+.rootItem {
+  background-color: #44546a !important;
+  color: #ffffff;
+  font-weight: bold;
+  border-right: none;
+  border-left: none;
+}
+
+.childItemHide {
+  display: none;
+}
+
+.childItemShow {
+  display: table-row;
+}
+
+.childItemShow1 {
+  display: table-row;
+  color: white;
+  background-color: #8a565f !important;
+}
+
+.childItemShow2 {
+  display: table-row;
+  color: white;
+  background-color: #56408a !important;
+}
+
+.childItemShow3 {
+  display: table-row;
+  color: white;
+  background-color: #3d5a88 !important;
+}
+
+.childItemShow4 {
+  display: table-row;
+  color: white;
+  background-color: #4a9d5f !important;
+}
+
+.childItemShow5 {
+  display: table-row;
+  color: white;
+  background-color: #9d7f4a !important;
+}
+
+.childItemShow6 {
+  display: table-row;
+  color: white;
+  background-color: #a34229 !important;
+}
+
+.childItemShow7 {
+  display: table-row;
+  color: white;
+  background-color: #570e3a !important;
+}
+
+.childItemShowEnd {
+  display: table-row;
+  color: black;
+  background-color: #f5f4f4 !important;
+}

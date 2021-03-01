@@ -1,0 +1,7 @@
+@font-face {
+  font-family: 'customWebFont';
+  src: url("src/assets/fonts/font1.woff2");
+}
+* {
+  font-family: 'customWebFont', Fallback, sans-serif;
+}

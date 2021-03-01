@@ -1,0 +1,47 @@
+<div class="container-hud position-absolute font-family"
+     style="z-index: 1000;
+     margin: 2rem 3.2rem 0 0;
+     padding: 0;
+     right: 0;
+     float: right;">
+  <div>
+    <button class="default" type="button" data-toggle="collapse" data-target="#collapseSubModel"
+            aria-expanded="false" aria-controls="collapseSubModel" style="float: right;">
+      <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+           focusable="false" width="1.4rem" height="1.4rem"
+           style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
+           preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+        <path
+          d="M18 15h-2v2h2m0-6h-2v2h2m2 6h-8v-2h2v-2h-2v-2h2v-2h-2V9h8M10 7H8V5h2m0 6H8V9h2m0 6H8v-2h2m0 6H8v-2h2M6 7H4V5h2m0 6H4V9h2m0 6H4v-2h2m0 6H4v-2h2m6-10V3H2v18h20V7H12z"
+          fill="white"/>
+      </svg>
+    </button>
+  </div>
+  <div class="collapse" id="collapseSubModel" style="margin: 1rem 1rem 1rem 1rem; float: right;">
+    <div class="card-body" style="padding: 0.5rem 0 0 0;">
+      <div style="font-size: 1rem; text-align: center; margin-bottom: 1rem; color: var(--grey-color);">
+        Выбранный элемент
+      </div>
+      <div *ngIf="condition; else elseBlock"></div>
+      <div id="rendererSubContainer" style="z-index: 100;"></div>
+      <ng-template #elseBlock>
+        <div style="background-color: #b4b4b4; width: 280px; height: 400px; position: relative;">
+          <!-- Загрузочный спиннер -->
+            <div class="d-flex justify-content-center loader-container" style="z-index: 1500;">
+              <table>
+                <tbody>
+                <tr>
+                  <td style="text-align: center;">
+                    <div class="spinner-border" role="status" style="width: 3.5rem; height: 3.5rem; color: #ffffff"></div>
+                  </td>
+                </tr>
+                </tbody>
+              </table>
+              <div>
+              </div>
+            </div>
+          </div>
+      </ng-template>
+    </div>
+  </div>
+</div>

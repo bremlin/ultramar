@@ -1,0 +1,29 @@
+[
+  {
+    "id": "61dddaa6-2901-4ead-9613-084fde9fc484",
+    "username": "test@user.com",
+    "active": true,
+    "roles": [
+      "admin"
+    ],
+    "firstName": "Константин",
+    "middleName": "",
+    "lastName": "Константинопольский",
+    "userpic": "",
+    "email": "test@user.com",
+    "activationCode": null,
+    "gender": null,
+    "locale": "NULL",
+    "lastVisit": "2018-11-27T08:41:14.721",
+    "activationSent": "2018-11-27T08:41:14.721",
+    "firstVisit": false,
+    "changePassword": false,
+    "enabled": true,
+    "authorities": [
+      "admin"
+    ],
+    "accountNonExpired": true,
+    "accountNonLocked": true,
+    "credentialsNonExpired": true
+  }
+]

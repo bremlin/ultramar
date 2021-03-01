@@ -1,0 +1,15 @@
+/*@font-face {*/
+/*  font-family: 'customWebFont2';*/
+/*  src: url("src/assets/fonts/font2.woff2");*/
+/*}*/
+/** {*/
+/*  font-family: 'customWebFont2', Fallback, sans-serif;*/
+/*}*/
+
+dt-calendar{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}

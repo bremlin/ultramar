@@ -1,0 +1,50 @@
+[
+  {
+    "id": "15e42d2e-cd6d-44b6-b6a1-d41f9503da3d",
+    "shortName": "м2",
+    "name": "Метры квадратные",
+    "sequence": 0
+  },
+  {
+    "id": "802615bb-5b2f-4b59-bce0-094fa266719a",
+    "shortName": "м3",
+    "name": "Метры кубические",
+    "sequence": 0
+  },
+  {
+    "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+    "shortName": "шт",
+    "name": "Штуки",
+    "sequence": 0
+  },
+  {
+    "id": "6f669de3-6ace-4d19-92dc-a92237bc2fe8",
+    "shortName": "т",
+    "name": "Тонны",
+    "sequence": 0
+  },
+  {
+    "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+    "shortName": "м",
+    "name": "Метры",
+    "sequence": 0
+  },
+  {
+    "id": "9457cfdb-417a-4c71-a72c-e5d1949f7aea",
+    "shortName": "линия",
+    "name": "Линии",
+    "sequence": 0
+  },
+  {
+    "id": "5e868693-4fc1-431e-b20a-544e1007d7da",
+    "shortName": "система",
+    "name": "Системы",
+    "sequence": 0
+  },
+  {
+    "id": "f7e84d7b-b03c-4b39-baea-28b9deff45a9",
+    "shortName": "купол",
+    "name": "Куполы",
+    "sequence": 0
+  }
+]

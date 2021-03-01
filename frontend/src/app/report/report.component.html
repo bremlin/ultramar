@@ -1,0 +1,546 @@
+<div class="main-container mr-32" style="min-width: fit-content;">
+
+  <div class="accordion font-family shadow-md-2" id="accordionExample" style="margin: 1rem 0 0 0;">
+    <div class="card">
+      <div class="card-header" id="headingOne">
+        <h2 class="mb-0">
+          <button class="btn btn-link" type="button" data-toggle="collapse" data-target="#collapseOne"
+                  aria-expanded="true" aria-controls="collapseOne"
+                  style="color: var(--main-color);">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                 focusable="false" width="1.4rem" height="1.4rem"
+                 style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg); vertical-align: text-bottom; margin: 0 0.3rem 0 0;"
+                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+              <path
+                d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m1 18h2v-6H7v6m4 0h2v-8h-2v8m4 0h2v-4h-2v4z"
+                fill="var(--main-color)"/>
+            </svg>
+            Сводный отчет Ультрамар v.1.0
+          </button>
+        </h2>
+      </div>
+      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+        <div class="card-body" style="padding: 0.5rem;">
+          <style type="text/css">
+            .cwdtable {
+              font-size: 12px;
+              color: #333333;
+              width: 100%;
+              border-width: 0;
+              border-color: var(--background);
+              border-collapse: collapse;
+            }
+
+            .cwdtable th {
+              font-size: 12px;
+              background: #d7ecef;
+              border-width: 1px;
+              padding: 8px;
+              border-style: solid;
+              border-color: var(--background);
+            }
+
+            .cwdtable tr {
+              background: #ffffff;
+            }
+
+            .cwdtable td {
+              font-size: 12px;
+              border-width: 1px;
+              padding: 8px;
+              border-style: solid;
+              border-color: var(--background);
+            }
+
+            .mobileTable {
+              overflow: auto;
+              width: 100%
+            }
+
+            .cwdtable th, .cwdtable td {
+            }
+
+            .cwdtable tr:hover {
+              background: #f1f4f4;
+            }
+          </style>
+          <div id="printBlock">
+
+            <div class="font-family" style="text-align: center; margin: 1.2rem 0 1.2rem 0; font-size: 1.2rem">
+              Статус выполнения работ по проекту Строительство промышленно-логистического комплекса Ультрамар-Терминал
+            </div>
+
+            <div class="mobileTable">
+              <table class="cwdtable" cellspacing="0" cellpadding="1" border="1">
+                <thead>
+                <tr>
+                <tr height=21 style='height:15.75pt'>
+                  <td height=21 colspan="2" style="border: none; width: 5%;">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         aria-hidden="true"
+                         focusable="false" width="1.4rem" height="1.4rem"
+                         style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);
+               cursor: pointer; margin-left: 0.3rem;"
+                         preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"
+                         (click)="expandHandler('showAll')">
+                      <path
+                        d="M4 2a2 2 0 0 0-2 2v10h2V4h10V2H4m4 4a2 2 0 0 0-2 2v10h2V8h10V6H8m12 6v8h-8v-8h8m0-2h-8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2m-1 7h-2v2h-2v-2h-2v-2h2v-2h2v2h2v2z"
+                        fill="#626262" class="svg-action"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         aria-hidden="true"
+                         focusable="false" width="1.4rem" height="1.4rem"
+                         style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);
+               cursor: pointer; margin-left: 0.5rem;"
+                         preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"
+                         (click)="expandHandler('hideAll')">
+                      <path
+                        d="M4 2a2 2 0 0 0-2 2v10h2V4h10V2H4m4 4a2 2 0 0 0-2 2v10h2V8h10V6H8m12 6v8h-8v-8h8m0-2h-8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2m-1 7h-6v-2h6v2z"
+                        fill="#626262" class="svg-action"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         aria-hidden="true"
+                         focusable="false" width="1.4rem" height="1.4rem"
+                         style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);
+               cursor: pointer; margin-left: 0.5rem;"
+                         preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"
+                         (click)="printReport('printBlock')">
+                      <path
+                        d="M18 3H6v4h12m1 5a1 1 0 0 1-1-1a1 1 0 0 1 1-1a1 1 0 0 1 1 1a1 1 0 0 1-1 1m-3 7H8v-5h8m3-6H5a3 3 0 0 0-3 3v6h4v4h12v-4h4v-6a3 3 0 0 0-3-3z"
+                        fill="#626262" class="svg-action"/>
+                    </svg>
+                  </td>
+                  <td colspan=7 style="border: none;"></td>
+                  <td colspan=2 style="border: none; text-align: end;">дата отчёта:</td>
+                  <td align=right
+                      style="font-weight: bold; background-color: #fff2cc; border: none; text-align: center;">
+                    30.03.2020
+                  </td>
+                </tr>
+                <tr height=21 style='height:15.75pt'>
+                  <td colspan=9 style="border: none;"></td>
+                  <td colspan=2 style="border: none; text-align: end;">отчётная неделя:</td>
+                  <td align=right
+                      style="font-weight: bold; background-color: #fff2cc; border: none; text-align: center;">
+                    14
+                  </td>
+                </tr>
+                <tr height=19 style='mso-height-source:userset;height:14.45pt'>
+                  <!--        <td rowspan="3" style="text-align: center; border: none;"></td>-->
+                  <td colspan=3 rowspan=3 width=380 class="report-header-td" style="min-width: 20rem;">Этапы,
+                    подобъекты,
+                    наименование вида работ
+                  </td>
+                  <td colspan=3 class="report-header-td" style="display: none;">Выдача РД</td>
+                  <td colspan=9 class="report-header-td">Строительно-монтажные работы</td>
+                  <td rowspan=3 width=33 class="report-header-td" style="width:25pt; display: none;">Комментарии</td>
+                </tr>
+                <tr height=23 style='mso-height-source:userset;height:17.25pt'>
+                  <!--        <td height=23 width=266 style="text-align: center; border: none;"></td>-->
+                  <td rowspan=2 class="report-header-td" style="display: none;">План</td>
+                  <td rowspan=2 width=75 class="report-header-td" style="display: none;">Факт / Прогноз</td>
+                  <td rowspan=2 class="report-header-td" width=19 style="display: none;">Откл-е</td>
+                  <td colspan=2 class="report-header-td" style='border-left:none'>План</td>
+                  <td colspan=2 class="report-header-td" style='border-left:none'>Факт / Расчет</td>
+                  <td colspan=1 rowspan=2 class="report-header-td" width=67
+                      style='border-right:.5pt solid white;width:50pt'>
+                    Резерв
+                  </td>
+                  <td rowspan=2 width=59 class="report-header-td" style="display: none;">Ед. изм.</td>
+                  <td rowspan=2 width=64 class="report-header-td" style="min-width: 5rem;">Объем, всего</td>
+                  <td colspan=3 width=205 class="report-header-td">Накопительно на дату отчета</td>
+                  <td colspan=3 width=205 class="report-header-td" style="display: none;">В среднем за сутки</td>
+                  <td rowspan=2 width=76 class="report-header-td" style="display: none;">Факт за последние сутки</td>
+                  <td rowspan=2 width=62 class="report-header-td" style="display: none;">% от общего объема</td>
+                  <td colspan=2 width=150 class="report-header-td" style="display: none;">Остаток работ, всего</td>
+                </tr>
+                <tr height=41>
+                  <!--        <td style="text-align: center; border: none;"></td>-->
+                  <td class="report-header-td" style="min-width: 5rem;">Начало</td>
+                  <td class="report-header-td">Окончание</td>
+                  <td class="report-header-td" style="min-width: 5rem;">Начало</td>
+                  <td class="report-header-td">Окончание</td>
+                  <td width=65 class="report-header-td" style="min-width: 5rem; ">План</td>
+                  <td width=65 class="report-header-td" style='min-width: 5rem;'>Факт</td>
+                  <td width=75 class="report-header-td" style='min-width: 5rem;'>Сравнение</td>
+                  <td width=65 class="report-header-td" style="display: none;">План средний</td>
+                  <td width=65 class="report-header-td" style="display: none;">Факт средний</td>
+                  <td width=75 class="report-header-td" style="display: none;">Сравнение</td>
+                  <td width=75 class="report-header-td" style="display: none;">объем</td>
+                  <td width=75 class="report-header-td" style="display: none;">%</td>
+                </tr>
+                </thead>
+
+
+                <ng-container *ngFor="let stages of frontendData.stages[0]">
+
+                  <div *ngIf="stages.parentId === 0; then elseBlock"></div>
+                  <div *ngIf="stages.parentId !== 0 && filterForStage2(stages.parentId); then thenBlock"></div>
+
+                  <ng-template #thenBlock>
+
+                    <tr style="display: none; background-color: #d9e1f2;" [id]="stages.parentId+stages.id">
+                      <!-- Служебный столбец -->
+                      <td style="border-right: none;">
+                        <div (click)="stageChangeState(stages.id, 2)">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                               aria-hidden="true"
+                               focusable="false" width="1.4rem" height="1.4rem"
+                               style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg); cursor: pointer;"
+                               preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" [id]="stages.parentId+'1'">
+                            <path
+                              d="M19 19V5H5v14h14m0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-8 4h2v4h4v2h-4v4h-2v-4H7v-2h4V7z"
+                              fill="#ffffff"/>
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                               aria-hidden="true"
+                               focusable="false" width="1.4rem" height="1.4rem"
+                               style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg); cursor: pointer; display: none;"
+                               preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" [id]="stages.parentId+'0'">
+                            <path
+                              d="M19 19V5H5v14h14m0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-2 8v2H7v-2h10z"
+                              fill="#ffffff"/>
+                          </svg>
+                        </div>
+                      </td>
+                      <!-- Этапы, подобъекты, наименование вида работ -->
+                      <td colspan=2
+                          style="font-weight: bold; border-right: none; border-left: none;">{{stages.name}}</td>
+                      <td style="font-weight: bold; text-align: center; border-right: none; border-left: none;"></td>
+                      <td style="font-weight: bold; text-align: center; border-right: none; border-left: none;"></td>
+                      <td style="font-weight: bold; text-align: center; border-right: none; border-left: none;"></td>
+                      <td style="font-weight: bold; text-align: center; border-right: none; border-left: none;"></td>
+                      <td style="font-weight: bold; text-align: center; border-right: none; border-left: none;"></td>
+                      <td style="font-weight: bold; text-align: center; border-right: none; border-left: none;"></td>
+                      <td style="font-weight: bold; text-align: center; border-right: none; border-left: none;"></td>
+                      <td style="font-weight: bold; text-align: center; border-right: none; border-left: none;"></td>
+                      <td style="font-weight: bold; text-align: center; border-right: none; border-left: none;"></td>
+                    </tr>
+
+                    <tbody [id]="stages.id+stages.id" style="display: none;">
+                    <tr *ngFor="let subStages of filterForStage3(stages.id)">
+                      <!-- Служебный столбец -->
+                      <td style="text-align: center; border-right: none;"></td>
+                      <!-- Этапы, подобъекты, наименование вида работ -->
+                      <td style="border-right: none; border-left: none;" colspan="2">{{subStages.name}}</td>
+                      <td style="text-align: center; border-right: none; border-left: none;">{{subStages.pStart}}</td>
+                      <td style="text-align: center; border-right: none; border-left: none;">{{subStages.pEnd}}</td>
+                      <td style="text-align: center; border-right: none; border-left: none;">{{subStages.fStart}}</td>
+                      <td style="text-align: center; border-right: none; border-left: none;">{{subStages.fEnd}}</td>
+                      <td style="text-align: center; border-right: none; border-left: none;">
+                        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                             aria-hidden="true"
+                             focusable="false" width="1rem" height="1rem"
+                             style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
+                             preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                          <path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2z"
+                                fill="#68A490"/>
+                        </svg>
+                      </td>
+                      <td style="text-align: center; border-right: none; border-left: none;">{{subStages.pvTotal}}</td>
+                      <td style="text-align: center; border-right: none; border-left: none;">{{subStages.pvPlan}}</td>
+                      <td style="text-align: center; border-right: none; border-left: none;">{{subStages.pvFact}}</td>
+                      <td style="text-align: center; border-left: none;"></td>
+                    </tr>
+                    </tbody>
+
+                  </ng-template>
+
+                  <ng-template #elseBlock>
+                    <tr style="background: #44546a; color: #ffffff">
+                      <td style="border-right: none; border-left: none;">
+                        <div (click)="stageChangeState(stages.id, 1)">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                               aria-hidden="true"
+                               focusable="false" width="1.4rem" height="1.4rem"
+                               style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg); cursor: pointer;"
+                               preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" [id]="stages.id+'1'">
+                            <path
+                              d="M19 19V5H5v14h14m0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-8 4h2v4h4v2h-4v4h-2v-4H7v-2h4V7z"
+                              fill="#ffffff"/>
+                          </svg>
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                               aria-hidden="true"
+                               focusable="false" width="1.4rem" height="1.4rem"
+                               style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg); cursor: pointer; display: none;"
+                               preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" [id]="stages.id+'0'">
+                            <path
+                              d="M19 19V5H5v14h14m0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-2 8v2H7v-2h10z"
+                              fill="#ffffff"/>
+                          </svg>
+                        </div>
+                      </td>
+                      <td colspan="2"
+                          style="font-weight: 700; border-right: none; border-left: none;">{{filterForStage1(stages.id)}}</td>
+                      <td colspan="9" style="border-left: none;"></td>
+                    </tr>
+                  </ng-template>
+
+                </ng-container>
+
+              </table>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="card">
+      <div class="card-header" id="headingTwo">
+        <h2 class="mb-0">
+          <button class="btn btn-link collapsed" type="button" data-toggle="collapse" data-target="#collapseTwo"
+                  aria-expanded="false" aria-controls="collapseTwo"
+                  style="color: var(--main-color);">
+            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                 focusable="false" width="1.4rem" height="1.4rem"
+                 style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg); vertical-align: text-bottom; margin: 0 0.3rem 0 0;"
+                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+              <path
+                d="M13 9h5.5L13 3.5V9M6 2h8l6 6v12a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V4c0-1.11.89-2 2-2m1 18h2v-6H7v6m4 0h2v-8h-2v8m4 0h2v-4h-2v4z"
+                fill="var(--main-color)"/>
+            </svg>
+            Сводный отчет Ультрамар v.3.1 (по конструкциям)
+          </button>
+        </h2>
+      </div>
+      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+        <div class="card-body" style="padding: 0.5rem;">
+          <div id="printReport2">
+
+            <div class="font-family" style="text-align: center; margin: 1.2rem 0 1.2rem 0; font-size: 1.2rem">
+              Статус выполнения работ по проекту Строительство промышленно-логистического комплекса Ультрамар-Терминал
+            </div>
+
+            <div class="mobileTable">
+              <table class="cwdtable" cellspacing="0" cellpadding="1" border="1">
+                <thead>
+                <tr>
+                <tr height=21 style='height:15.75pt'>
+                  <td height=21 colspan="2" style="border: none; width: 5%;">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         aria-hidden="true"
+                         focusable="false" width="1.4rem" height="1.4rem"
+                         style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);
+               cursor: pointer; margin-left: 0.3rem;"
+                         preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"
+                         (click)="changeStateSecondReport('showAll')">
+                      <path
+                        d="M4 2a2 2 0 0 0-2 2v10h2V4h10V2H4m4 4a2 2 0 0 0-2 2v10h2V8h10V6H8m12 6v8h-8v-8h8m0-2h-8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2m-1 7h-2v2h-2v-2h-2v-2h2v-2h2v2h2v2z"
+                        fill="#626262" class="svg-action"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         aria-hidden="true"
+                         focusable="false" width="1.4rem" height="1.4rem"
+                         style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);
+               cursor: pointer; margin-left: 0.5rem;"
+                         preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"
+                         (click)="changeStateSecondReport('hideAll')">
+                      <path
+                        d="M4 2a2 2 0 0 0-2 2v10h2V4h10V2H4m4 4a2 2 0 0 0-2 2v10h2V8h10V6H8m12 6v8h-8v-8h8m0-2h-8a2 2 0 0 0-2 2v8a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2v-8a2 2 0 0 0-2-2m-1 7h-6v-2h6v2z"
+                        fill="#626262" class="svg-action"/>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         aria-hidden="true"
+                         focusable="false" width="1.4rem" height="1.4rem"
+                         style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);
+               cursor: pointer; margin-left: 0.5rem;"
+                         preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"
+                         (click)="printReport('printReport2')">
+                      <path
+                        d="M18 3H6v4h12m1 5a1 1 0 0 1-1-1a1 1 0 0 1 1-1a1 1 0 0 1 1 1a1 1 0 0 1-1 1m-3 7H8v-5h8m3-6H5a3 3 0 0 0-3 3v6h4v4h12v-4h4v-6a3 3 0 0 0-3-3z"
+                        fill="#626262" class="svg-action"/>
+                    </svg>
+                  </td>
+                  <td colspan=7 style="border: none;"></td>
+                  <td colspan=2 style="border: none; text-align: end;">дата отчёта:</td>
+                  <td align=right
+                      style="font-weight: bold; background-color: #fff2cc; border: none; text-align: center;">05.04.2020
+                  </td>
+                </tr>
+                <tr height=21 style='height:15.75pt'>
+                  <td colspan=9 style="border: none;"></td>
+                  <td colspan=2 style="border: none; text-align: end;">отчётная неделя:</td>
+                  <td align=right
+                      style="font-weight: bold; background-color: #fff2cc; border: none; text-align: center;">14
+                  </td>
+                </tr>
+                <tr height=19 style='mso-height-source:userset;height:14.45pt'>
+                  <td colspan=3 rowspan=3 width=380 class="report-header-td" style="min-width: 20rem;">Этапы,
+                    подобъекты, наименование вида работ
+                  </td>
+                  <td colspan=3 class="report-header-td" style="display: none;">Выдача РД</td>
+                  <td colspan=9 class="report-header-td">Строительно-монтажные работы</td>
+                  <td rowspan=3 width=33 class="report-header-td" style="width:25pt; display: none;">Комментарии</td>
+                </tr>
+                <tr height=23 style='mso-height-source:userset;height:17.25pt'>
+                  <!--        <td height=23 width=266 style="text-align: center; border: none;"></td>-->
+                  <td rowspan=2 class="report-header-td" style="display: none;">План</td>
+                  <td rowspan=2 width=75 class="report-header-td" style="display: none;">Факт / Прогноз</td>
+                  <td rowspan=2 class="report-header-td" width=19 style="display: none;">Откл-е</td>
+                  <td colspan=2 class="report-header-td" style='border-left:none'>План</td>
+                  <td colspan=2 class="report-header-td" style='border-left:none'>Факт / Расчет</td>
+                  <td colspan=1 rowspan=2 class="report-header-td" width=67
+                      style='border-right:.5pt solid white;width:50pt'>
+                    Резерв
+                  </td>
+                  <td rowspan=2 width=59 class="report-header-td" style="display: none;">Ед. изм.</td>
+                  <td rowspan=2 width=64 class="report-header-td" style="min-width: 5rem;">Объем, всего</td>
+                  <td colspan=3 width=205 class="report-header-td">Накопительно на дату отчета</td>
+                  <td colspan=3 width=205 class="report-header-td" style="display: none;">В среднем за сутки</td>
+                  <td rowspan=2 width=76 class="report-header-td" style="display: none;">Факт за последние сутки</td>
+                  <td rowspan=2 width=62 class="report-header-td" style="display: none;">% от общего объема</td>
+                  <td colspan=2 width=150 class="report-header-td" style="display: none;">Остаток работ, всего</td>
+                </tr>
+                <tr height=41>
+                  <!--        <td style="text-align: center; border: none;"></td>-->
+                  <td class="report-header-td" style="min-width: 5rem;">Начало</td>
+                  <td class="report-header-td">Окончание</td>
+                  <td class="report-header-td" style="min-width: 5rem;">Начало</td>
+                  <td class="report-header-td">Окончание</td>
+                  <td width=65 class="report-header-td" style="min-width: 5rem; ">План</td>
+                  <td width=65 class="report-header-td" style='min-width: 5rem;'>Факт</td>
+                  <td width=75 class="report-header-td" style='min-width: 5rem;'>Сравнение</td>
+                  <td width=65 class="report-header-td" style="display: none;">План средний</td>
+                  <td width=65 class="report-header-td" style="display: none;">Факт средний</td>
+                  <td width=75 class="report-header-td" style="display: none;">Сравнение</td>
+                  <td width=75 class="report-header-td" style="display: none;">объем</td>
+                  <td width=75 class="report-header-td" style="display: none;">%</td>
+                </tr>
+                </thead>
+
+
+                <tbody>
+
+
+                <ng-template #recursiveList let-list>
+
+                  <ng-container *ngFor="let item of list">
+
+                    <div *ngIf="item.parentId === 0; then rootBlock"></div>
+                    <div
+                      *ngIf="item.parentId !== 0 && item.children?.length > 0; then itemWithChildrenBlock else itemWithoutChildrenBlock"></div>
+
+                    <ng-template #rootBlock>
+                      <tr class="rootItem" [id]="item.parentId">
+                        <td style="border-right: none;">
+                          <div (click)="elementStateChange(item)">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 aria-hidden="true"
+                                 focusable="false" width="1.4rem" height="1.4rem"
+                                 style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg); cursor: pointer;"
+                                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" [id]="item.parentId+'1'">
+                              <path
+                                d="M19 19V5H5v14h14m0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-8 4h2v4h4v2h-4v4h-2v-4H7v-2h4V7z"
+                                fill="#ffffff"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 aria-hidden="true"
+                                 focusable="false" width="1.4rem" height="1.4rem"
+                                 style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg); cursor: pointer; display: none;"
+                                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" [id]="item.parentId+'0'">
+                              <path
+                                d="M19 19V5H5v14h14m0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-2 8v2H7v-2h10z"
+                                fill="#ffffff"/>
+                            </svg>
+                          </div>
+                        </td>
+                        <td colspan="2" style="font-weight: bold; border-right: none; border-left: none;">{{ item.name }}</td>
+                        <td style="font-weight: bold; text-align: center; border-right: none; border-left: none;"></td>
+                        <td style="font-weight: bold; text-align: center; border-right: none; border-left: none;"></td>
+                        <td style="font-weight: bold; text-align: center; border-right: none; border-left: none;"></td>
+                        <td style="font-weight: bold; text-align: center; border-right: none; border-left: none;"></td>
+                        <td style="font-weight: bold; text-align: center; border-right: none; border-left: none;"></td>
+                        <td style="font-weight: bold; text-align: center; border-right: none; border-left: none;"></td>
+                        <td style="font-weight: bold; text-align: center; border-right: none; border-left: none;"></td>
+                        <td style="font-weight: bold; text-align: center; border-right: none; border-left: none;"></td>
+                        <td style="font-weight: bold; text-align: center; border-right: none; border-left: none;"></td>
+                      </tr>
+                    </ng-template>
+
+                    <ng-template #itemWithChildrenBlock>
+                      <tr [id]="item.id" class="childItemHide">
+                        <td style="border-right: none;">
+                          <div (click)="elementStateChange(item)">
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 aria-hidden="true"
+                                 focusable="false" width="1.4rem" height="1.4rem"
+                                 style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg); cursor: pointer;"
+                                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" [id]="item.id">
+                              <path
+                                d="M19 19V5H5v14h14m0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-8 4h2v4h4v2h-4v4h-2v-4H7v-2h4V7z"
+                                fill="#ffffff"/>
+                            </svg>
+                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                 aria-hidden="true"
+                                 focusable="false" width="1.4rem" height="1.4rem"
+                                 style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg); cursor: pointer; display: none;"
+                                 preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24" [id]="item.id">
+                              <path
+                                d="M19 19V5H5v14h14m0-16a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14m-2 8v2H7v-2h10z"
+                                fill="#ffffff"/>
+                            </svg>
+                          </div>
+                        </td>
+                        <td colspan="2"
+                            style="font-weight: bold; border-right: none; border-left: none;">{{ item.name }}</td>
+                        <td style="font-weight: bold; text-align: center; border-right: none; border-left: none;"></td>
+                        <td style="font-weight: bold; text-align: center; border-right: none; border-left: none;"></td>
+                        <td style="font-weight: bold; text-align: center; border-right: none; border-left: none;"></td>
+                        <td style="font-weight: bold; text-align: center; border-right: none; border-left: none;"></td>
+                        <td style="font-weight: bold; text-align: center; border-right: none; border-left: none;"></td>
+                        <td style="font-weight: bold; text-align: center; border-right: none; border-left: none;"></td>
+                        <td style="font-weight: bold; text-align: center; border-right: none; border-left: none;"></td>
+                        <td style="font-weight: bold; text-align: center; border-right: none; border-left: none;"></td>
+                        <td style="font-weight: bold; text-align: center; border-right: none; border-left: none;"></td>
+                      </tr>
+                    </ng-template>
+
+                    <ng-template #itemWithoutChildrenBlock>
+                      <tr [id]="item.id" class="childItemHide" style="background-color: #ffffff;">
+                        <td style="text-align: center; border-right: none; border-left: none;"></td>
+                        <td colspan="2"
+                            style="border-right: none; border-left: none; margin-left: 1rem;">{{ item.name }}</td>
+                        <td style="text-align: center; border-right: none; border-left: none;">{{ item.pStart }}</td>
+                        <td style="text-align: center; border-right: none; border-left: none;">{{ item.pEnd }}</td>
+                        <td style="text-align: center; border-right: none; border-left: none;">{{ item.fStart }}</td>
+                        <td style="text-align: center; border-right: none; border-left: none;">{{ item.fEnd }}</td>
+                        <td style="text-align: center; border-right: none; border-left: none;">
+                          <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                               aria-hidden="true"
+                               focusable="false" width="1rem" height="1rem"
+                               style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
+                               preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                            <path d="M12 2A10 10 0 0 0 2 12a10 10 0 0 0 10 10a10 10 0 0 0 10-10A10 10 0 0 0 12 2z"
+                                  fill="#68A490"/>
+                          </svg>
+                        </td>
+                        <td style="text-align: center; border-right: none; border-left: none;">{{ item.pvTotal }}</td>
+                        <td style="text-align: center; border-right: none; border-left: none;">{{ item.pvPlan }}</td>
+                        <td style="text-align: center; border-right: none; border-left: none;">{{ item.pvFact }}</td>
+                        <td style="text-align: center; border-right: none; border-left: none;">{{ item.pvFactAccum }}</td>
+                      </tr>
+                    </ng-template>
+
+
+                    <ng-container *ngIf="item.children?.length > 0">
+                      <ng-container
+                        *ngTemplateOutlet="recursiveList; context:{ $implicit: item.children }"></ng-container>
+                    </ng-container>
+                  </ng-container>
+
+
+                </ng-template>
+                <ng-container *ngTemplateOutlet="recursiveList; context:{ $implicit: reportArr }"></ng-container>
+
+                </tbody>
+
+              </table>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>

@@ -1,0 +1,2296 @@
+[
+  {
+    "id": "94102524-4bb4-4bbf-b3c9-a3c8c5812c6a",
+    "shortName": "UPV02.3",
+    "name": "Погружение шпунта Ларсен",
+    "discipline": {
+      "id": "1f1b1945-f104-467f-937d-8d9c08dc8b7b",
+      "shortName": "UPV02",
+      "name": "Свайные и шпунтовые работы",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 2
+  },
+  {
+    "id": "f7e10b28-7243-4a45-b976-70e873b05e4b",
+    "shortName": "UPV02.4",
+    "name": "Устройство буронабивных свай",
+    "discipline": {
+      "id": "1f1b1945-f104-467f-937d-8d9c08dc8b7b",
+      "shortName": "UPV02",
+      "name": "Свайные и шпунтовые работы",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 3
+  },
+  {
+    "id": "a18c6def-2b8f-4db6-a2c2-491a2fdb445e",
+    "shortName": "UPV02.5",
+    "name": "Устройство железобетонных забивных свай",
+    "discipline": {
+      "id": "1f1b1945-f104-467f-937d-8d9c08dc8b7b",
+      "shortName": "UPV02",
+      "name": "Свайные и шпунтовые работы",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 4
+  },
+  {
+    "id": "6b5f02b9-80ee-4495-b2b1-a658e1246dd6",
+    "shortName": "UPV03.7",
+    "name": "Обратная засыпка песком траншей и котлованов с послойным уплотнением",
+    "discipline": {
+      "id": "36292495-6d00-45e2-ad80-3c8aa3c3cc80",
+      "shortName": "UPV03",
+      "name": "Земляные работы",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "802615bb-5b2f-4b59-bce0-094fa266719a",
+      "shortName": "м3",
+      "name": "Метры кубические",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 6
+  },
+  {
+    "id": "3ab9c92f-acbc-4136-b0ae-8d097faa3486",
+    "shortName": "UPV02.7",
+    "name": "Заполнение бетоном полых свай и свай-оболочек",
+    "discipline": {
+      "id": "1f1b1945-f104-467f-937d-8d9c08dc8b7b",
+      "shortName": "UPV02",
+      "name": "Свайные и шпунтовые работы",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 6
+  },
+  {
+    "id": "ff196629-1529-4cb4-bf0c-3a6e244508c8",
+    "shortName": "UPV02.6",
+    "name": "Заполнение песком полых свай и свай-оболочек",
+    "discipline": {
+      "id": "1f1b1945-f104-467f-937d-8d9c08dc8b7b",
+      "shortName": "UPV02",
+      "name": "Свайные и шпунтовые работы",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 5
+  },
+  {
+    "id": "ff637351-879d-4b6e-bff4-65ce3279a67c",
+    "shortName": "UPV02.1",
+    "name": "Изготовление свай-оболочек, шпунта трубчатого сварного",
+    "discipline": {
+      "id": "1f1b1945-f104-467f-937d-8d9c08dc8b7b",
+      "shortName": "UPV02",
+      "name": "Свайные и шпунтовые работы",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 0
+  },
+  {
+    "id": "e646aa4e-8a59-4816-aa05-c95b050c9447",
+    "shortName": "UPV02.2",
+    "name": "Погружение свай-оболочек, шпунта трубчатого сварного",
+    "discipline": {
+      "id": "1f1b1945-f104-467f-937d-8d9c08dc8b7b",
+      "shortName": "UPV02",
+      "name": "Свайные и шпунтовые работы",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 1
+  },
+  {
+    "id": "e73c281f-9d96-46b8-af41-f8d8d69598d0",
+    "shortName": "UPV01.2",
+    "name": "Монтаж швартово-отбойных устройств",
+    "discipline": {
+      "id": "449ef58b-6d12-44ef-b643-85ddbe6ab54c",
+      "shortName": "UPV01",
+      "name": "Гидротехнические работы",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 1
+  },
+  {
+    "id": "0eb83040-57a2-47af-8d1c-8691e99cef01",
+    "shortName": "UPV01.3",
+    "name": "Монтаж навигационного оборудования",
+    "discipline": {
+      "id": "449ef58b-6d12-44ef-b643-85ddbe6ab54c",
+      "shortName": "UPV01",
+      "name": "Гидротехнические работы",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 2
+  },
+  {
+    "id": "d64cf46e-6a5a-47ac-acaf-628049b7fee7",
+    "shortName": "UPV00.1",
+    "name": "Расчистка территории от зеленых насаждений",
+    "discipline": {
+      "id": "17dde15c-3147-4e85-b16f-d202cdd79c50",
+      "shortName": "UPV00",
+      "name": "Инженерная подготовка территории",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "15e42d2e-cd6d-44b6-b6a1-d41f9503da3d",
+      "shortName": "м2",
+      "name": "Метры квадратные",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 0
+  },
+  {
+    "id": "c7befe38-2e89-4f77-ba1a-5329cb175769",
+    "shortName": "UPV00.2",
+    "name": "Срезка растительного слоя грунта",
+    "discipline": {
+      "id": "17dde15c-3147-4e85-b16f-d202cdd79c50",
+      "shortName": "UPV00",
+      "name": "Инженерная подготовка территории",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "15e42d2e-cd6d-44b6-b6a1-d41f9503da3d",
+      "shortName": "м2",
+      "name": "Метры квадратные",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 1
+  },
+  {
+    "id": "b68a2700-0ddd-4cfa-8c07-52c7d233b186",
+    "shortName": "UPV00.3",
+    "name": "Планировка территории",
+    "discipline": {
+      "id": "17dde15c-3147-4e85-b16f-d202cdd79c50",
+      "shortName": "UPV00",
+      "name": "Инженерная подготовка территории",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "15e42d2e-cd6d-44b6-b6a1-d41f9503da3d",
+      "shortName": "м2",
+      "name": "Метры квадратные",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 2
+  },
+  {
+    "id": "38a76669-8e2d-4118-a3d4-eaaf7bcc2ce6",
+    "shortName": "UPV03.5",
+    "name": "Укладка нетканого синтетического материала (геотекстиль)",
+    "discipline": {
+      "id": "36292495-6d00-45e2-ad80-3c8aa3c3cc80",
+      "shortName": "UPV03",
+      "name": "Земляные работы",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "15e42d2e-cd6d-44b6-b6a1-d41f9503da3d",
+      "shortName": "м2",
+      "name": "Метры квадратные",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 4
+  },
+  {
+    "id": "888a3e3d-e737-433e-b0d9-556717201014",
+    "shortName": "UPV01.1",
+    "name": "Дноуглубление",
+    "discipline": {
+      "id": "449ef58b-6d12-44ef-b643-85ddbe6ab54c",
+      "shortName": "UPV01",
+      "name": "Гидротехнические работы",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "802615bb-5b2f-4b59-bce0-094fa266719a",
+      "shortName": "м3",
+      "name": "Метры кубические",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 0
+  },
+  {
+    "id": "c0830e47-7544-4dbd-905c-d39b5ee45cea",
+    "shortName": "UPV03.6",
+    "name": "Армирование грунтовых насыпей георешетками",
+    "discipline": {
+      "id": "36292495-6d00-45e2-ad80-3c8aa3c3cc80",
+      "shortName": "UPV03",
+      "name": "Земляные работы",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "15e42d2e-cd6d-44b6-b6a1-d41f9503da3d",
+      "shortName": "м2",
+      "name": "Метры квадратные",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 5
+  },
+  {
+    "id": "a4494040-7a7b-4194-9f97-5b6b4765385d",
+    "shortName": "UPV04.4",
+    "name": "Устройство покрытий бетонных",
+    "discipline": {
+      "id": "d23f7f3f-8cbe-4558-9152-a47af301109c",
+      "shortName": "UPV04",
+      "name": "Благоустройство",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "15e42d2e-cd6d-44b6-b6a1-d41f9503da3d",
+      "shortName": "м2",
+      "name": "Метры квадратные",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 3
+  },
+  {
+    "id": "fd86e34f-26f3-40e9-a702-c4516969b09e",
+    "shortName": "UPV04.5",
+    "name": "Устройство тротуарных покрытий",
+    "discipline": {
+      "id": "d23f7f3f-8cbe-4558-9152-a47af301109c",
+      "shortName": "UPV04",
+      "name": "Благоустройство",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "15e42d2e-cd6d-44b6-b6a1-d41f9503da3d",
+      "shortName": "м2",
+      "name": "Метры квадратные",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 4
+  },
+  {
+    "id": "e7592d4d-3eb3-453d-a89a-27cc5ae1f8e5",
+    "shortName": "UPV04.6",
+    "name": "Устройство отмостки зданий и сооружений",
+    "discipline": {
+      "id": "d23f7f3f-8cbe-4558-9152-a47af301109c",
+      "shortName": "UPV04",
+      "name": "Благоустройство",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "15e42d2e-cd6d-44b6-b6a1-d41f9503da3d",
+      "shortName": "м2",
+      "name": "Метры квадратные",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 5
+  },
+  {
+    "id": "421d3e47-7cf4-4129-826c-59c34a2da2e8",
+    "shortName": "UPV06.3",
+    "name": "Устройство монолитных ж/б конструкций",
+    "discipline": {
+      "id": "6164243f-8fff-4558-9c75-2826739fc789",
+      "shortName": "UPV06",
+      "name": "Бетонные работы",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "802615bb-5b2f-4b59-bce0-094fa266719a",
+      "shortName": "м3",
+      "name": "Метры кубические",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 2
+  },
+  {
+    "id": "b85f142c-1c3b-4d31-94bd-f0dce8608968",
+    "shortName": "UPV05.5",
+    "name": "Устройство бетонной подготовки",
+    "discipline": {
+      "id": "b0702a4d-a5d2-458e-87af-9757e43a5e7f",
+      "shortName": "UPV05",
+      "name": "Ограждение территории и внутренних сооружений",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 4
+  },
+  {
+    "id": "6495384f-1e9b-4150-b7ec-0bc30a1dfd87",
+    "shortName": "UPV04.7",
+    "name": "Озеленение территории, защитные лесонасаждения",
+    "discipline": {
+      "id": "d23f7f3f-8cbe-4558-9152-a47af301109c",
+      "shortName": "UPV04",
+      "name": "Благоустройство",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "15e42d2e-cd6d-44b6-b6a1-d41f9503da3d",
+      "shortName": "м2",
+      "name": "Метры квадратные",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 6
+  },
+  {
+    "id": "5eaa6171-bcc3-42c4-93bb-9ccd7773265a",
+    "shortName": "UPV03.1",
+    "name": "Разработка грунта",
+    "discipline": {
+      "id": "36292495-6d00-45e2-ad80-3c8aa3c3cc80",
+      "shortName": "UPV03",
+      "name": "Земляные работы",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "802615bb-5b2f-4b59-bce0-094fa266719a",
+      "shortName": "м3",
+      "name": "Метры кубические",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 0
+  },
+  {
+    "id": "99312aef-9c10-4803-8089-647765726a6e",
+    "shortName": "UPV03.2",
+    "name": "Устройство берегозащитных и оградительных сооружений",
+    "discipline": {
+      "id": "36292495-6d00-45e2-ad80-3c8aa3c3cc80",
+      "shortName": "UPV03",
+      "name": "Земляные работы",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "802615bb-5b2f-4b59-bce0-094fa266719a",
+      "shortName": "м3",
+      "name": "Метры кубические",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 1
+  },
+  {
+    "id": "3a9062b5-7e51-4b4f-98e4-c49fde9b8416",
+    "shortName": "UPV03.3",
+    "name": "Устройство щебеночных оснований",
+    "discipline": {
+      "id": "36292495-6d00-45e2-ad80-3c8aa3c3cc80",
+      "shortName": "UPV03",
+      "name": "Земляные работы",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "802615bb-5b2f-4b59-bce0-094fa266719a",
+      "shortName": "м3",
+      "name": "Метры кубические",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 2
+  },
+  {
+    "id": "1150f875-b46e-465b-ae5f-b6c9347fbb29",
+    "shortName": "UPV03.4",
+    "name": "Устройство песчаных оснований",
+    "discipline": {
+      "id": "36292495-6d00-45e2-ad80-3c8aa3c3cc80",
+      "shortName": "UPV03",
+      "name": "Земляные работы",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "802615bb-5b2f-4b59-bce0-094fa266719a",
+      "shortName": "м3",
+      "name": "Метры кубические",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 3
+  },
+  {
+    "id": "28135cec-579f-470d-ab1a-111513391a9d",
+    "shortName": "UPV07.1",
+    "name": "Надув купола",
+    "discipline": {
+      "id": "80f95b7f-d37c-41a0-b1f4-71c21ca0b9d9",
+      "shortName": "UPV07",
+      "name": "Возведение купольных конструкций",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 0
+  },
+  {
+    "id": "6210f115-85b9-4920-93e9-ee9450162c08",
+    "shortName": "UPV04.8",
+    "name": "Установка малых архитектурных форм",
+    "discipline": {
+      "id": "d23f7f3f-8cbe-4558-9152-a47af301109c",
+      "shortName": "UPV04",
+      "name": "Благоустройство",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 7
+  },
+  {
+    "id": "5c97e344-32a8-42b3-9205-c8905dd12a6e",
+    "shortName": "UPV05.1",
+    "name": "Устройство удерживающих металлических барьерных ограждений дорожной группы",
+    "discipline": {
+      "id": "b0702a4d-a5d2-458e-87af-9757e43a5e7f",
+      "shortName": "UPV05",
+      "name": "Ограждение территории и внутренних сооружений",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 0
+  },
+  {
+    "id": "962bb174-9b82-431a-aab4-eb828582d3d7",
+    "shortName": "UPV05.2",
+    "name": "Устройство шумозащитного ограждения",
+    "discipline": {
+      "id": "b0702a4d-a5d2-458e-87af-9757e43a5e7f",
+      "shortName": "UPV05",
+      "name": "Ограждение территории и внутренних сооружений",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 1
+  },
+  {
+    "id": "df0665f9-fc08-4505-b0fe-49b504301345",
+    "shortName": "UPV04.1",
+    "name": "Устройство покрытий из асфальтобетонных смесей",
+    "discipline": {
+      "id": "d23f7f3f-8cbe-4558-9152-a47af301109c",
+      "shortName": "UPV04",
+      "name": "Благоустройство",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "15e42d2e-cd6d-44b6-b6a1-d41f9503da3d",
+      "shortName": "м2",
+      "name": "Метры квадратные",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 0
+  },
+  {
+    "id": "f207f2b2-fe19-4ccd-b008-a9862c25d9c9",
+    "shortName": "UPV04.2",
+    "name": "Устройство покрытий из камня терминального",
+    "discipline": {
+      "id": "d23f7f3f-8cbe-4558-9152-a47af301109c",
+      "shortName": "UPV04",
+      "name": "Благоустройство",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "15e42d2e-cd6d-44b6-b6a1-d41f9503da3d",
+      "shortName": "м2",
+      "name": "Метры квадратные",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 1
+  },
+  {
+    "id": "ac562bb8-0231-4fdc-a6db-b29b11960381",
+    "shortName": "UPV04.3",
+    "name": "Устройство покрытий из сборных ж/б плит ПАГ",
+    "discipline": {
+      "id": "d23f7f3f-8cbe-4558-9152-a47af301109c",
+      "shortName": "UPV04",
+      "name": "Благоустройство",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "15e42d2e-cd6d-44b6-b6a1-d41f9503da3d",
+      "shortName": "м2",
+      "name": "Метры квадратные",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 2
+  },
+  {
+    "id": "47d6ebd1-f6a2-4f73-8a56-24cd31eadeee",
+    "shortName": "UPV05.4",
+    "name": "Устройство элементов ограждения территории",
+    "discipline": {
+      "id": "b0702a4d-a5d2-458e-87af-9757e43a5e7f",
+      "shortName": "UPV05",
+      "name": "Ограждение территории и внутренних сооружений",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 3
+  },
+  {
+    "id": "3cf34316-96fc-4974-9855-86c142cef08c",
+    "shortName": "UPV05.3",
+    "name": "Устройство сетчатого ограждения (3D-сетка)",
+    "discipline": {
+      "id": "b0702a4d-a5d2-458e-87af-9757e43a5e7f",
+      "shortName": "UPV05",
+      "name": "Ограждение территории и внутренних сооружений",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 2
+  },
+  {
+    "id": "cbce34f2-95e4-4be9-84fa-a13b29ce3eea",
+    "shortName": "UPV06.4",
+    "name": "Монтаж сборных ж/б конструкций (электрика, канализация, основные сооружения)",
+    "discipline": {
+      "id": "6164243f-8fff-4558-9c75-2826739fc789",
+      "shortName": "UPV06",
+      "name": "Бетонные работы",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "802615bb-5b2f-4b59-bce0-094fa266719a",
+      "shortName": "м3",
+      "name": "Метры кубические",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 3
+  },
+  {
+    "id": "7f4fbbf8-5d64-420e-9721-aef562b4fcfb",
+    "shortName": "UPV06.2",
+    "name": "Устройство арматурного каркаса",
+    "discipline": {
+      "id": "6164243f-8fff-4558-9c75-2826739fc789",
+      "shortName": "UPV06",
+      "name": "Бетонные работы",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "6f669de3-6ace-4d19-92dc-a92237bc2fe8",
+      "shortName": "т",
+      "name": "Тонны",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 1
+  },
+  {
+    "id": "45bb5c84-7223-43f5-b945-e39d3d97faea",
+    "shortName": "UPV07.2",
+    "name": "Нанесение пенополиуретанового покрытия",
+    "discipline": {
+      "id": "80f95b7f-d37c-41a0-b1f4-71c21ca0b9d9",
+      "shortName": "UPV07",
+      "name": "Возведение купольных конструкций",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "15e42d2e-cd6d-44b6-b6a1-d41f9503da3d",
+      "shortName": "м2",
+      "name": "Метры квадратные",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 1
+  },
+  {
+    "id": "5b280de0-9f6f-4a12-81ba-36342eea4dd2",
+    "shortName": "UPV06.1",
+    "name": "Устройство бетонной подготовки",
+    "discipline": {
+      "id": "6164243f-8fff-4558-9c75-2826739fc789",
+      "shortName": "UPV06",
+      "name": "Бетонные работы",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "802615bb-5b2f-4b59-bce0-094fa266719a",
+      "shortName": "м3",
+      "name": "Метры кубические",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 0
+  },
+  {
+    "id": "66de7831-69d6-44b3-8269-77a3f44b0304",
+    "shortName": "UPV07.3",
+    "name": "Устройство арматурного каркаса (купольных конструкций)",
+    "discipline": {
+      "id": "80f95b7f-d37c-41a0-b1f4-71c21ca0b9d9",
+      "shortName": "UPV07",
+      "name": "Возведение купольных конструкций",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "6f669de3-6ace-4d19-92dc-a92237bc2fe8",
+      "shortName": "т",
+      "name": "Тонны",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 2
+  },
+  {
+    "id": "5f9ff5b7-3212-4506-b483-e68395db1d78",
+    "shortName": "UPV06.5",
+    "name": "Гидроизоляция ж/б конструкций",
+    "discipline": {
+      "id": "6164243f-8fff-4558-9c75-2826739fc789",
+      "shortName": "UPV06",
+      "name": "Бетонные работы",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "15e42d2e-cd6d-44b6-b6a1-d41f9503da3d",
+      "shortName": "м2",
+      "name": "Метры квадратные",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 4
+  },
+  {
+    "id": "f09a98b3-f03d-43c6-b005-a348d90e88e6",
+    "shortName": "UPV07.4",
+    "name": "Нанесение бетона методом торкретирования",
+    "discipline": {
+      "id": "80f95b7f-d37c-41a0-b1f4-71c21ca0b9d9",
+      "shortName": "UPV07",
+      "name": "Возведение купольных конструкций",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "802615bb-5b2f-4b59-bce0-094fa266719a",
+      "shortName": "м3",
+      "name": "Метры кубические",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 3
+  },
+  {
+    "id": "6091f171-c0b9-4613-bcc7-ee1930b2a001",
+    "shortName": "UPV08.4",
+    "name": "Монтаж основных и вспомогательных металлоконструкций",
+    "discipline": {
+      "id": "a18e726e-563c-45f9-b9f3-7832dff10ee5",
+      "shortName": "UPV08",
+      "name": "Монтаж металлоконструкций",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "6f669de3-6ace-4d19-92dc-a92237bc2fe8",
+      "shortName": "т",
+      "name": "Тонны",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 3
+  },
+  {
+    "id": "83c92ecd-9d3b-40ee-9678-d938c66c9c6e",
+    "shortName": "UPV07.5",
+    "name": "Доведение форм куполов, устройство проемов",
+    "discipline": {
+      "id": "80f95b7f-d37c-41a0-b1f4-71c21ca0b9d9",
+      "shortName": "UPV07",
+      "name": "Возведение купольных конструкций",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "f7e84d7b-b03c-4b39-baea-28b9deff45a9",
+      "shortName": "купол",
+      "name": "Куполы",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 4
+  },
+  {
+    "id": "27dcc5e3-e2d0-4977-a9de-4996dbb1ed1a",
+    "shortName": "UPV08.1",
+    "name": "Изготовление металлоконструкций",
+    "discipline": {
+      "id": "a18e726e-563c-45f9-b9f3-7832dff10ee5",
+      "shortName": "UPV08",
+      "name": "Монтаж металлоконструкций",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "6f669de3-6ace-4d19-92dc-a92237bc2fe8",
+      "shortName": "т",
+      "name": "Тонны",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 0
+  },
+  {
+    "id": "bd732abb-db5d-46c1-b0ba-0e3f92f3545b",
+    "shortName": "UPV09.12",
+    "name": "Монтаж оборудования ж/д станций (СЦБ)",
+    "discipline": {
+      "id": "4478bc5f-d0c2-470a-ac4b-db9732c3c28d",
+      "shortName": "UPV09",
+      "name": "Монтаж оборудования",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 11
+  },
+  {
+    "id": "480387d1-0206-432b-b679-7876ba562341",
+    "shortName": "UPV07.6",
+    "name": "Установка купольных ворот",
+    "discipline": {
+      "id": "80f95b7f-d37c-41a0-b1f4-71c21ca0b9d9",
+      "shortName": "UPV07",
+      "name": "Возведение купольных конструкций",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 5
+  },
+  {
+    "id": "eba8e632-6018-4743-a788-975da1a214cc",
+    "shortName": "UPV08.2",
+    "name": "Монтаж анкерных тяг",
+    "discipline": {
+      "id": "a18e726e-563c-45f9-b9f3-7832dff10ee5",
+      "shortName": "UPV08",
+      "name": "Монтаж металлоконструкций",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 1
+  },
+  {
+    "id": "db4fa221-2e41-4cfb-83e9-4be664775d99",
+    "shortName": "UPV08.3",
+    "name": "Монтаж распределительного пояса",
+    "discipline": {
+      "id": "a18e726e-563c-45f9-b9f3-7832dff10ee5",
+      "shortName": "UPV08",
+      "name": "Монтаж металлоконструкций",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 2
+  },
+  {
+    "id": "23834a37-6820-4abc-b7cb-c7fd50c0e6b3",
+    "shortName": "UPV08.5",
+    "name": "Монтаж конструкций из профилированного листа",
+    "discipline": {
+      "id": "a18e726e-563c-45f9-b9f3-7832dff10ee5",
+      "shortName": "UPV08",
+      "name": "Монтаж металлоконструкций",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "15e42d2e-cd6d-44b6-b6a1-d41f9503da3d",
+      "shortName": "м2",
+      "name": "Метры квадратные",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 4
+  },
+  {
+    "id": "8874605c-0ccd-42f2-9d81-154b4e5cd4df",
+    "shortName": "UPV09.1",
+    "name": "Устройство конвейерных линий",
+    "discipline": {
+      "id": "4478bc5f-d0c2-470a-ac4b-db9732c3c28d",
+      "shortName": "UPV09",
+      "name": "Монтаж оборудования",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "9457cfdb-417a-4c71-a72c-e5d1949f7aea",
+      "shortName": "линия",
+      "name": "Линии",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 0
+  },
+  {
+    "id": "81886aba-31e3-486b-becd-79e4385058ad",
+    "shortName": "UPV09.2",
+    "name": "Монтаж диверторов",
+    "discipline": {
+      "id": "4478bc5f-d0c2-470a-ac4b-db9732c3c28d",
+      "shortName": "UPV09",
+      "name": "Монтаж оборудования",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 1
+  },
+  {
+    "id": "a28b77e0-43ff-4356-ba1f-d5e20d55e571",
+    "shortName": "UPV09.3",
+    "name": "Монтаж аспирационных установок",
+    "discipline": {
+      "id": "4478bc5f-d0c2-470a-ac4b-db9732c3c28d",
+      "shortName": "UPV09",
+      "name": "Монтаж оборудования",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 2
+  },
+  {
+    "id": "dff29a05-c015-4ffc-8866-e9a70adf931a",
+    "shortName": "UPV09.4",
+    "name": "Монтаж приемных бункеров",
+    "discipline": {
+      "id": "4478bc5f-d0c2-470a-ac4b-db9732c3c28d",
+      "shortName": "UPV09",
+      "name": "Монтаж оборудования",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 3
+  },
+  {
+    "id": "7b2bc016-aa3d-4d0e-985a-cdb781f2f2c2",
+    "shortName": "UPV09.5",
+    "name": "Монтаж грейферных задвижек",
+    "discipline": {
+      "id": "4478bc5f-d0c2-470a-ac4b-db9732c3c28d",
+      "shortName": "UPV09",
+      "name": "Монтаж оборудования",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 4
+  },
+  {
+    "id": "196aa962-b4c7-47f4-a1f3-c78ea17923b2",
+    "shortName": "UPV09.6",
+    "name": "Монтаж магнитных сепараторов",
+    "discipline": {
+      "id": "4478bc5f-d0c2-470a-ac4b-db9732c3c28d",
+      "shortName": "UPV09",
+      "name": "Монтаж оборудования",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 5
+  },
+  {
+    "id": "7b60cc5b-9f61-4d57-a94e-61219cee5660",
+    "shortName": "UPV09.7",
+    "name": "Монтаж технологического оборудования куполов",
+    "discipline": {
+      "id": "4478bc5f-d0c2-470a-ac4b-db9732c3c28d",
+      "shortName": "UPV09",
+      "name": "Монтаж оборудования",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 6
+  },
+  {
+    "id": "4f2edd2c-5406-45c9-a801-93704571e5c8",
+    "shortName": "UPV09.8",
+    "name": "Монтаж грузоподъемного оборудования",
+    "discipline": {
+      "id": "4478bc5f-d0c2-470a-ac4b-db9732c3c28d",
+      "shortName": "UPV09",
+      "name": "Монтаж оборудования",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 7
+  },
+  {
+    "id": "b635bff9-c790-4b66-9418-293fd7e826aa",
+    "shortName": "UPV09.9",
+    "name": "Монтаж компрессорного оборудования",
+    "discipline": {
+      "id": "4478bc5f-d0c2-470a-ac4b-db9732c3c28d",
+      "shortName": "UPV09",
+      "name": "Монтаж оборудования",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 8
+  },
+  {
+    "id": "b9b41b8e-d41c-464f-85f1-6e2dc7ad947c",
+    "shortName": "UPV09.10",
+    "name": "Монтаж емкостного оборудования",
+    "discipline": {
+      "id": "4478bc5f-d0c2-470a-ac4b-db9732c3c28d",
+      "shortName": "UPV09",
+      "name": "Монтаж оборудования",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 9
+  },
+  {
+    "id": "dffeb774-0596-4bac-93f6-0eac67687be2",
+    "shortName": "UPV09.11",
+    "name": "Монтаж противопожарного оборудования",
+    "discipline": {
+      "id": "4478bc5f-d0c2-470a-ac4b-db9732c3c28d",
+      "shortName": "UPV09",
+      "name": "Монтаж оборудования",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 10
+  },
+  {
+    "id": "dc282bb7-0f00-4c51-83f9-efb7e0f49abf",
+    "shortName": "UPV11.10",
+    "name": "Монтаж противопожарного оборудования",
+    "discipline": {
+      "id": "3706ce1c-89c1-465c-bfcd-6b5b77f64801",
+      "shortName": "UPV11",
+      "name": "Внутренние инженерные сети и оборудование",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 9
+  },
+  {
+    "id": "6a63030a-f6e2-4ebe-87ae-5709b3ef89fb",
+    "shortName": "UPV11.9",
+    "name": "Монтаж запорно-регулирующей арматуры",
+    "discipline": {
+      "id": "3706ce1c-89c1-465c-bfcd-6b5b77f64801",
+      "shortName": "UPV11",
+      "name": "Внутренние инженерные сети и оборудование",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 8
+  },
+  {
+    "id": "36b55117-dbf0-4025-9bce-03182bb7a678",
+    "shortName": "UPV11.8",
+    "name": "Монтаж воздуховодов системы вентиляции",
+    "discipline": {
+      "id": "3706ce1c-89c1-465c-bfcd-6b5b77f64801",
+      "shortName": "UPV11",
+      "name": "Внутренние инженерные сети и оборудование",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "15e42d2e-cd6d-44b6-b6a1-d41f9503da3d",
+      "shortName": "м2",
+      "name": "Метры квадратные",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 7
+  },
+  {
+    "id": "cabdb0c6-b917-445f-8aab-7126459042eb",
+    "shortName": "UPV10.1",
+    "name": "Монтаж трубопроводов горячего и холодного водоснабжения (В1, Т3)",
+    "discipline": {
+      "id": "45557c07-059a-4ded-b466-d5b11054df40",
+      "shortName": "UPV10",
+      "name": "Наружные инженерные сети и коммуникации",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 15
+  },
+  {
+    "id": "929abe29-3c69-4d01-a4c1-064d0291780b",
+    "shortName": "UPV10.2",
+    "name": "Монтаж трубопроводов противопожарного водоснабжения (В2)",
+    "discipline": {
+      "id": "45557c07-059a-4ded-b466-d5b11054df40",
+      "shortName": "UPV10",
+      "name": "Наружные инженерные сети и коммуникации",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 16
+  },
+  {
+    "id": "63b05412-63dd-4f23-b3d3-646c8a195731",
+    "shortName": "UPV10.3",
+    "name": "Монтаж трубопроводов тепловых сетей (Т1, Т2)",
+    "discipline": {
+      "id": "45557c07-059a-4ded-b466-d5b11054df40",
+      "shortName": "UPV10",
+      "name": "Наружные инженерные сети и коммуникации",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 17
+  },
+  {
+    "id": "d9ece122-f2e6-4392-af55-ba4b7216091d",
+    "shortName": "UPV10.4",
+    "name": "Монтаж трубопроводов бытовой канализации (НК1)",
+    "discipline": {
+      "id": "45557c07-059a-4ded-b466-d5b11054df40",
+      "shortName": "UPV10",
+      "name": "Наружные инженерные сети и коммуникации",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 18
+  },
+  {
+    "id": "3954f241-c269-4cb5-bfbb-5adcb94bca9d",
+    "shortName": "UPV10.5",
+    "name": "Монтаж трубопроводов ливневой канализации К2, ЛОС и КНС (НК2)",
+    "discipline": {
+      "id": "45557c07-059a-4ded-b466-d5b11054df40",
+      "shortName": "UPV10",
+      "name": "Наружные инженерные сети и коммуникации",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 19
+  },
+  {
+    "id": "f183d6ea-b77a-4f4d-8243-9190a95b2315",
+    "shortName": "UPV10.7",
+    "name": "Пусконаладочные работы",
+    "discipline": {
+      "id": "45557c07-059a-4ded-b466-d5b11054df40",
+      "shortName": "UPV10",
+      "name": "Наружные инженерные сети и коммуникации",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "5e868693-4fc1-431e-b20a-544e1007d7da",
+      "shortName": "система",
+      "name": "Системы",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 21
+  },
+  {
+    "id": "352129ed-a722-4d7b-a4f4-05b539bff1ac",
+    "shortName": "UPV10.6",
+    "name": "Монтаж запорно-регулирующей арматуры",
+    "discipline": {
+      "id": "45557c07-059a-4ded-b466-d5b11054df40",
+      "shortName": "UPV10",
+      "name": "Наружные инженерные сети и коммуникации",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 20
+  },
+  {
+    "id": "4e657e10-f08f-4a2f-a928-a6990d34fa2e",
+    "shortName": "UPV11.1",
+    "name": "Монтаж трубопроводов горячего и холодного водоснабжения (В1, Т3)",
+    "discipline": {
+      "id": "3706ce1c-89c1-465c-bfcd-6b5b77f64801",
+      "shortName": "UPV11",
+      "name": "Внутренние инженерные сети и оборудование",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 0
+  },
+  {
+    "id": "133fb4b4-3a28-4ef9-991f-28916fadda17",
+    "shortName": "UPV11.2",
+    "name": "Монтаж трубопроводов противопожарного водоснабжения (В2)",
+    "discipline": {
+      "id": "3706ce1c-89c1-465c-bfcd-6b5b77f64801",
+      "shortName": "UPV11",
+      "name": "Внутренние инженерные сети и оборудование",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 1
+  },
+  {
+    "id": "8e4ecd34-bff2-4204-8a15-024500381a48",
+    "shortName": "UPV11.3",
+    "name": "Монтаж трубопроводов тепловых сетей (Т1, Т2)",
+    "discipline": {
+      "id": "3706ce1c-89c1-465c-bfcd-6b5b77f64801",
+      "shortName": "UPV11",
+      "name": "Внутренние инженерные сети и оборудование",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 2
+  },
+  {
+    "id": "c9681aa6-853d-4447-a4d7-e86cfc33de35",
+    "shortName": "UPV11.4",
+    "name": "Монтаж трубопроводов бытовой канализации (НК1)",
+    "discipline": {
+      "id": "3706ce1c-89c1-465c-bfcd-6b5b77f64801",
+      "shortName": "UPV11",
+      "name": "Внутренние инженерные сети и оборудование",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 3
+  },
+  {
+    "id": "0b0a2fea-350f-45c5-8c3d-db4562cc7587",
+    "shortName": "UPV11.5",
+    "name": "Монтаж трубопроводов отопления (Т1)",
+    "discipline": {
+      "id": "3706ce1c-89c1-465c-bfcd-6b5b77f64801",
+      "shortName": "UPV11",
+      "name": "Внутренние инженерные сети и оборудование",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 4
+  },
+  {
+    "id": "0655a792-322a-47c8-ad3c-6b176eee0542",
+    "shortName": "UPV11.6",
+    "name": "Монтаж трубопроводов хладагента (Х5)",
+    "discipline": {
+      "id": "3706ce1c-89c1-465c-bfcd-6b5b77f64801",
+      "shortName": "UPV11",
+      "name": "Внутренние инженерные сети и оборудование",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 5
+  },
+  {
+    "id": "c6d57e9a-1106-44d4-abdc-27d19f83b247",
+    "shortName": "UPV11.7",
+    "name": "Монтаж трубопроводов воздухоснабжения (А2)",
+    "discipline": {
+      "id": "3706ce1c-89c1-465c-bfcd-6b5b77f64801",
+      "shortName": "UPV11",
+      "name": "Внутренние инженерные сети и оборудование",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 6
+  },
+  {
+    "id": "e76d1d1b-06d8-476a-a187-05ac4c09a677",
+    "shortName": "UPV11.11",
+    "name": "Установка сантехнического оборудования",
+    "discipline": {
+      "id": "3706ce1c-89c1-465c-bfcd-6b5b77f64801",
+      "shortName": "UPV11",
+      "name": "Внутренние инженерные сети и оборудование",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 10
+  },
+  {
+    "id": "3f7fe130-cdb8-4486-802d-a9ff3ffd92a5",
+    "shortName": "UPV11.14",
+    "name": "Монтаж оборудования отопления, вентиляции и кондиционирования",
+    "discipline": {
+      "id": "3706ce1c-89c1-465c-bfcd-6b5b77f64801",
+      "shortName": "UPV11",
+      "name": "Внутренние инженерные сети и оборудование",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 13
+  },
+  {
+    "id": "e35069de-7990-487f-b1ad-81ad9a8a914f",
+    "shortName": "UPV11.12",
+    "name": "Монтаж котельного оборудования",
+    "discipline": {
+      "id": "3706ce1c-89c1-465c-bfcd-6b5b77f64801",
+      "shortName": "UPV11",
+      "name": "Внутренние инженерные сети и оборудование",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 11
+  },
+  {
+    "id": "00da910d-4153-44d6-a98a-a7635d429bc3",
+    "shortName": "UPV11.13",
+    "name": "Монтаж насосного оборудования",
+    "discipline": {
+      "id": "3706ce1c-89c1-465c-bfcd-6b5b77f64801",
+      "shortName": "UPV11",
+      "name": "Внутренние инженерные сети и оборудование",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 12
+  },
+  {
+    "id": "42abe80d-77d3-41b3-9f67-c60978890a7a",
+    "shortName": "UPV17.1",
+    "name": "Устройство стен и перегородок из кирпича и стеновых блоков",
+    "discipline": {
+      "id": "b8be913f-9bd7-48b3-bae5-ac849be3f54a",
+      "shortName": "UPV17",
+      "name": "Возведение зданий и сооружений",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "15e42d2e-cd6d-44b6-b6a1-d41f9503da3d",
+      "shortName": "м2",
+      "name": "Метры квадратные",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 0
+  },
+  {
+    "id": "59df8430-fda2-4ea0-aa57-cd53884859d2",
+    "shortName": "UPV11.15",
+    "name": "Монтаж нагревательного оборудования",
+    "discipline": {
+      "id": "3706ce1c-89c1-465c-bfcd-6b5b77f64801",
+      "shortName": "UPV11",
+      "name": "Внутренние инженерные сети и оборудование",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 14
+  },
+  {
+    "id": "935edeaf-e3f0-4246-8b7d-4e10c413c3e0",
+    "shortName": "UPV13.2",
+    "name": "Монтаж кабеленесущих конструкций",
+    "discipline": {
+      "id": "997469b3-b434-4f0b-8631-829871892cdb",
+      "shortName": "UPV13",
+      "name": "Внутренние электротехнические сети и оборудование",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 1
+  },
+  {
+    "id": "bbdd81a1-ec8b-45b3-9fc5-4574e54e8d3e",
+    "shortName": "UPV13.3",
+    "name": "Монтаж электротехнических изделий",
+    "discipline": {
+      "id": "997469b3-b434-4f0b-8631-829871892cdb",
+      "shortName": "UPV13",
+      "name": "Внутренние электротехнические сети и оборудование",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 2
+  },
+  {
+    "id": "d23d931a-7419-4702-904f-531faa22e96f",
+    "shortName": "UPV13.4",
+    "name": "Монтаж электрощитового оборудования",
+    "discipline": {
+      "id": "997469b3-b434-4f0b-8631-829871892cdb",
+      "shortName": "UPV13",
+      "name": "Внутренние электротехнические сети и оборудование",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 3
+  },
+  {
+    "id": "dbba7178-4f2e-44c3-8faf-12ca7325c97a",
+    "shortName": "UPV16.1",
+    "name": "Прокладка сетей АСУ ТП",
+    "discipline": {
+      "id": "2f1bfdb6-b75b-4502-82a6-3819644a2c64",
+      "shortName": "UPV16",
+      "name": "АСУ ТП",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 0
+  },
+  {
+    "id": "173002f8-7af3-4000-9196-a320f03d9713",
+    "shortName": "UPV12.1",
+    "name": "Монтаж трансформаторных подстанций",
+    "discipline": {
+      "id": "49ee323e-8773-48ed-a9cd-3f96f51953e5",
+      "shortName": "UPV12",
+      "name": "Наружные электротехнические сети",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 0
+  },
+  {
+    "id": "b3deac42-c6dd-44f1-8306-6357c68ac4c8",
+    "shortName": "UPV12.2",
+    "name": "Монтаж кабеленесущих конструкций",
+    "discipline": {
+      "id": "49ee323e-8773-48ed-a9cd-3f96f51953e5",
+      "shortName": "UPV12",
+      "name": "Наружные электротехнические сети",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 1
+  },
+  {
+    "id": "287e258b-23cc-47c2-a40e-12e8bdad74dc",
+    "shortName": "UPV12.3",
+    "name": "Устройство кабельных линий 10 кВ",
+    "discipline": {
+      "id": "49ee323e-8773-48ed-a9cd-3f96f51953e5",
+      "shortName": "UPV12",
+      "name": "Наружные электротехнические сети",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 2
+  },
+  {
+    "id": "c55cdd35-5bcc-4c61-ab5d-8424da6ccde2",
+    "shortName": "UPV12.4",
+    "name": "Устройство кабельных линий 0,69 кВ",
+    "discipline": {
+      "id": "49ee323e-8773-48ed-a9cd-3f96f51953e5",
+      "shortName": "UPV12",
+      "name": "Наружные электротехнические сети",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 3
+  },
+  {
+    "id": "75a843db-33d6-451b-8e5d-3b61a8e1d1dd",
+    "shortName": "UPV12.5",
+    "name": "Устройство кабельных линий 0,4 кВ",
+    "discipline": {
+      "id": "49ee323e-8773-48ed-a9cd-3f96f51953e5",
+      "shortName": "UPV12",
+      "name": "Наружные электротехнические сети",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 4
+  },
+  {
+    "id": "5aedba61-4361-42dc-a40d-6a42e5fcad91",
+    "shortName": "UPV12.6",
+    "name": "Устройство кабельных линий 0,23 кВ",
+    "discipline": {
+      "id": "49ee323e-8773-48ed-a9cd-3f96f51953e5",
+      "shortName": "UPV12",
+      "name": "Наружные электротехнические сети",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 5
+  },
+  {
+    "id": "5cb61c40-b828-4f9c-a5f6-d903da6beefa",
+    "shortName": "UPV12.7",
+    "name": "Устройство системы заземления и молниезащиты",
+    "discipline": {
+      "id": "49ee323e-8773-48ed-a9cd-3f96f51953e5",
+      "shortName": "UPV12",
+      "name": "Наружные электротехнические сети",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "5e868693-4fc1-431e-b20a-544e1007d7da",
+      "shortName": "система",
+      "name": "Системы",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 6
+  },
+  {
+    "id": "3dc9bbd4-620d-40d7-a316-0dc3effe0b42",
+    "shortName": "UPV12.8",
+    "name": "Устройство системы уравнивания потенциалов",
+    "discipline": {
+      "id": "49ee323e-8773-48ed-a9cd-3f96f51953e5",
+      "shortName": "UPV12",
+      "name": "Наружные электротехнические сети",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "5e868693-4fc1-431e-b20a-544e1007d7da",
+      "shortName": "система",
+      "name": "Системы",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 7
+  },
+  {
+    "id": "d938a91e-0ae5-4a5d-9d07-b2b502ddb916",
+    "shortName": "UPV12.9",
+    "name": "Пусконаладочные работы",
+    "discipline": {
+      "id": "49ee323e-8773-48ed-a9cd-3f96f51953e5",
+      "shortName": "UPV12",
+      "name": "Наружные электротехнические сети",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "5e868693-4fc1-431e-b20a-544e1007d7da",
+      "shortName": "система",
+      "name": "Системы",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 8
+  },
+  {
+    "id": "f7112e8c-bf0d-42f2-a15d-744a680b60dd",
+    "shortName": "UPV16.2",
+    "name": "Монтаж приборов АСУ ТП",
+    "discipline": {
+      "id": "2f1bfdb6-b75b-4502-82a6-3819644a2c64",
+      "shortName": "UPV16",
+      "name": "АСУ ТП",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 1
+  },
+  {
+    "id": "ba5b806a-f3cc-4e57-8f33-04553bad3b61",
+    "shortName": "UPV16.3",
+    "name": "Пусконаладочные работы",
+    "discipline": {
+      "id": "2f1bfdb6-b75b-4502-82a6-3819644a2c64",
+      "shortName": "UPV16",
+      "name": "АСУ ТП",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "5e868693-4fc1-431e-b20a-544e1007d7da",
+      "shortName": "система",
+      "name": "Системы",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 2
+  },
+  {
+    "id": "cdeab6b3-9cdc-4632-8036-1c43cc16f475",
+    "shortName": "UPV13.1",
+    "name": "Разводка кабельно-проводниковой продукции",
+    "discipline": {
+      "id": "997469b3-b434-4f0b-8631-829871892cdb",
+      "shortName": "UPV13",
+      "name": "Внутренние электротехнические сети и оборудование",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 0
+  },
+  {
+    "id": "eace7b92-275f-4bf7-8bde-a5a7731e157c",
+    "shortName": "UPV15.4",
+    "name": "Прокладка сетей диспетчеризации",
+    "discipline": {
+      "id": "b019f9da-b8a0-4157-b322-335df0f18cc4",
+      "shortName": "UPV15",
+      "name": "Внутренние слаботочные сети",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 3
+  },
+  {
+    "id": "f0016830-5867-464f-8324-cabd1ae2a73a",
+    "shortName": "UPV15.3",
+    "name": "Прокладка сетей охранного телевидения (ОТ)",
+    "discipline": {
+      "id": "b019f9da-b8a0-4157-b322-335df0f18cc4",
+      "shortName": "UPV15",
+      "name": "Внутренние слаботочные сети",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 2
+  },
+  {
+    "id": "387733a1-acea-4724-ba04-60767206322f",
+    "shortName": "UPV15.2",
+    "name": "Прокладка сетей связи (СС)",
+    "discipline": {
+      "id": "b019f9da-b8a0-4157-b322-335df0f18cc4",
+      "shortName": "UPV15",
+      "name": "Внутренние слаботочные сети",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 1
+  },
+  {
+    "id": "9920fbc5-3104-40b6-868d-51f51753ea92",
+    "shortName": "UPV14.1",
+    "name": "Прокладка сетей охранно-пожарной сигнализации (ОПС)",
+    "discipline": {
+      "id": "b6043684-5a9a-4709-b41d-b3e314631b5a",
+      "shortName": "UPV14",
+      "name": "Наружные слаботочные сети",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 0
+  },
+  {
+    "id": "432dd4a7-ba4b-4aaf-81d3-ea3f3dc732ba",
+    "shortName": "UPV15.1",
+    "name": "Прокладка сетей охранно-пожарной сигнализации (ОПС)",
+    "discipline": {
+      "id": "b019f9da-b8a0-4157-b322-335df0f18cc4",
+      "shortName": "UPV15",
+      "name": "Внутренние слаботочные сети",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 0
+  },
+  {
+    "id": "64349a00-9f81-459d-9e56-fca38ec97f00",
+    "shortName": "UPV15.5",
+    "name": "Монтаж оборудования и изделий",
+    "discipline": {
+      "id": "b019f9da-b8a0-4157-b322-335df0f18cc4",
+      "shortName": "UPV15",
+      "name": "Внутренние слаботочные сети",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 4
+  },
+  {
+    "id": "985797f7-e3d8-49aa-865f-5f457261018b",
+    "shortName": "UPV15.6",
+    "name": "Монтаж приборов КИПиА",
+    "discipline": {
+      "id": "b019f9da-b8a0-4157-b322-335df0f18cc4",
+      "shortName": "UPV15",
+      "name": "Внутренние слаботочные сети",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 5
+  },
+  {
+    "id": "41eb2fd2-9962-4eca-bb7f-8fcf35eefb83",
+    "shortName": "UPV14.4",
+    "name": "Прокладка сетей диспетчеризации",
+    "discipline": {
+      "id": "b6043684-5a9a-4709-b41d-b3e314631b5a",
+      "shortName": "UPV14",
+      "name": "Наружные слаботочные сети",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 3
+  },
+  {
+    "id": "5b2e15f4-91cd-49fc-90c7-9348dc2976db",
+    "shortName": "UPV14.3",
+    "name": "Прокладка сетей охранного телевидения (ОТ)",
+    "discipline": {
+      "id": "b6043684-5a9a-4709-b41d-b3e314631b5a",
+      "shortName": "UPV14",
+      "name": "Наружные слаботочные сети",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 2
+  },
+  {
+    "id": "150fbc73-077c-4c40-9dfa-863f22cbd30a",
+    "shortName": "UPV14.2",
+    "name": "Прокладка сетей связи (СС)",
+    "discipline": {
+      "id": "b6043684-5a9a-4709-b41d-b3e314631b5a",
+      "shortName": "UPV14",
+      "name": "Наружные слаботочные сети",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "160d84c2-b0ad-4b56-84ca-94dca6fc9080",
+      "shortName": "м",
+      "name": "Метры",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 1
+  },
+  {
+    "id": "c4ee8d51-08d0-4bda-ac06-699530f6f2da",
+    "shortName": "UPV14.5",
+    "name": "Монтаж оборудования слаботочных сетей",
+    "discipline": {
+      "id": "b6043684-5a9a-4709-b41d-b3e314631b5a",
+      "shortName": "UPV14",
+      "name": "Наружные слаботочные сети",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 4
+  },
+  {
+    "id": "fefe72a5-a88c-4e76-9639-dce0aec31c5a",
+    "shortName": "UPV14.6",
+    "name": "Монтаж приборов КИПиА",
+    "discipline": {
+      "id": "b6043684-5a9a-4709-b41d-b3e314631b5a",
+      "shortName": "UPV14",
+      "name": "Наружные слаботочные сети",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 5
+  },
+  {
+    "id": "28667cc5-960a-46c7-8301-62ad73c44f1d",
+    "shortName": "UPV14.7",
+    "name": "Пусконаладочные работы",
+    "discipline": {
+      "id": "b6043684-5a9a-4709-b41d-b3e314631b5a",
+      "shortName": "UPV14",
+      "name": "Наружные слаботочные сети",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "5e868693-4fc1-431e-b20a-544e1007d7da",
+      "shortName": "система",
+      "name": "Системы",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 6
+  },
+  {
+    "id": "ef538690-58c5-4624-8c7b-802eb5b33af1",
+    "shortName": "UPV15.7",
+    "name": "Пусконаладочные работы",
+    "discipline": {
+      "id": "b019f9da-b8a0-4157-b322-335df0f18cc4",
+      "shortName": "UPV15",
+      "name": "Внутренние слаботочные сети",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "5e868693-4fc1-431e-b20a-544e1007d7da",
+      "shortName": "система",
+      "name": "Системы",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 6
+  },
+  {
+    "id": "9df9c1fc-8b9d-484a-815b-3b32f8d45956",
+    "shortName": "UPV17.7",
+    "name": "Монтаж сооружений из блок-модулей",
+    "discipline": {
+      "id": "b8be913f-9bd7-48b3-bae5-ac849be3f54a",
+      "shortName": "UPV17",
+      "name": "Возведение зданий и сооружений",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "3f705ae1-bd84-445a-b3d3-823e53e40eb3",
+      "shortName": "шт",
+      "name": "Штуки",
+      "sequence": 0
+    },
+    "leadResource": false,
+    "sequence": 6
+  },
+  {
+    "id": "021f98d4-c8f2-403d-89e4-da3813911abd",
+    "shortName": "UPV17.6",
+    "name": "Устройство кровли из рулонных материалов",
+    "discipline": {
+      "id": "b8be913f-9bd7-48b3-bae5-ac849be3f54a",
+      "shortName": "UPV17",
+      "name": "Возведение зданий и сооружений",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "15e42d2e-cd6d-44b6-b6a1-d41f9503da3d",
+      "shortName": "м2",
+      "name": "Метры квадратные",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 5
+  },
+  {
+    "id": "0f9fc583-dbd9-43ed-90c2-f2a1783b48bf",
+    "shortName": "UPV17.5",
+    "name": "Теплоизоляция конструкций",
+    "discipline": {
+      "id": "b8be913f-9bd7-48b3-bae5-ac849be3f54a",
+      "shortName": "UPV17",
+      "name": "Возведение зданий и сооружений",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "15e42d2e-cd6d-44b6-b6a1-d41f9503da3d",
+      "shortName": "м2",
+      "name": "Метры квадратные",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 4
+  },
+  {
+    "id": "6296e865-3bbf-4f94-a223-f4a99c93e337",
+    "shortName": "UPV17.4",
+    "name": "Отделочные работы",
+    "discipline": {
+      "id": "b8be913f-9bd7-48b3-bae5-ac849be3f54a",
+      "shortName": "UPV17",
+      "name": "Возведение зданий и сооружений",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "15e42d2e-cd6d-44b6-b6a1-d41f9503da3d",
+      "shortName": "м2",
+      "name": "Метры квадратные",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 3
+  },
+  {
+    "id": "f6fcd910-7425-4e5f-87c0-4421b6905df6",
+    "shortName": "UPV17.3",
+    "name": "Устройство и заполнение проемов зданий",
+    "discipline": {
+      "id": "b8be913f-9bd7-48b3-bae5-ac849be3f54a",
+      "shortName": "UPV17",
+      "name": "Возведение зданий и сооружений",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "15e42d2e-cd6d-44b6-b6a1-d41f9503da3d",
+      "shortName": "м2",
+      "name": "Метры квадратные",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 2
+  },
+  {
+    "id": "4357cc4c-7d9b-4fcd-aaf5-b59c40524a0d",
+    "shortName": "UPV17.2",
+    "name": "Устройство перегородок из г/к",
+    "discipline": {
+      "id": "b8be913f-9bd7-48b3-bae5-ac849be3f54a",
+      "shortName": "UPV17",
+      "name": "Возведение зданий и сооружений",
+      "sequence": 0
+    },
+    "uom": {
+      "id": "15e42d2e-cd6d-44b6-b6a1-d41f9503da3d",
+      "shortName": "м2",
+      "name": "Метры квадратные",
+      "sequence": 0
+    },
+    "leadResource": true,
+    "sequence": 1
+  },
+  {
+    "id": "06818ade-385b-4db0-9382-6dedcf394df2",
+    "shortName": "UPV20.1",
+    "name": "Прочие работы",
+    "discipline": {
+      "id": "0b956fad-c106-423c-826e-1379fe7979d0",
+      "shortName": "UPV20",
+      "name": "Прочие работы",
+      "sequence": 0
+    },
+    "uom": null,
+    "leadResource": false,
+    "sequence": 0
+  }
+]

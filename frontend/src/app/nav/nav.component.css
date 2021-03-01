@@ -1,0 +1,16 @@
+/* Кастом navbar */
+.navbar {
+  padding: 0 3.2rem 1rem 3.2rem;
+}
+/* Кастом navbar-dark navbar-brand */
+.navbar-brand {
+  color: #8D929E;
+}
+.navbar-brand:hover {
+  color: #8D929E;
+}
+
+.navbar-brand-img {
+  margin: 0 2rem 0 0;
+}
+

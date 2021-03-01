@@ -1,0 +1,408 @@
+<div class="main-container font-family mr-32">
+  <div style="position: relative; height: 100%; pointer-events: all;">
+    <ul ngbNav #nav="ngbNav" class="nav-tabs tab-bar">
+      <li [ngbNavItem]="1">
+        <a ngbNavLink class="nav-link-config animation-02">Виды работ</a>
+        <ng-template ngbNavContent>
+          <table>
+            <tr class="list-table-header-tr">
+              <th class="list-table-th">Дисциплины</th>
+              <th></th>
+              <th></th>
+            </tr>
+            <tr class="list-table-item animation-02" style="font-size: 0.8rem" *ngFor="let i of pvDataFiltered"
+                (mouseenter)="showSvg(i.id)" (mouseleave)="hideSvg(i.id)">
+              <td class="list-table-td" contenteditable="true">
+                {{i.id}}
+              </td>
+              <td contenteditable="true">
+                {{i.name}}
+              </td>
+              <td>
+                <div class="flex-table-row-r-container del-svg del-svg-hide animation-02" id="{{i.id}}">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                       focusable="false" width="1.2rem" height="1.2rem"
+                       style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
+                       preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                    <path d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9m0 5h2v9H9V8m4 0h2v9h-2V8z"
+                          fill="#626262"/>
+                  </svg>
+                </div>
+              </td>
+            </tr>
+          </table>
+          <!--          <input class="new-discipline animation-02" type="text" placeholder="Код" readonly="readonly" style="width: 4rem;">-->
+          <!--          <input class="new-discipline animation-02" type="text" readonly="readonly" style="width: auto;">-->
+          <input class="new-discipline animation-02" type="text" placeholder="+ Новая дисциплина">
+        </ng-template>
+      </li>
+      <li [ngbNavItem]="2">
+        <a ngbNavLink class="nav-link-config animation-02">Сооружения</a>
+        <ng-template ngbNavContent>
+          <table style="min-width: 25rem;">
+            <tr class="list-table-header-tr">
+              <th class="list-table-th">Подобъекты</th>
+              <th></th>
+              <th></th>
+            </tr>
+            <ng-container *ngFor="let building of buildingArr">
+              <tr class="list-table-item animation-02" style="font-size: 0.8rem"
+                  (mouseenter)="showSvg(building.id)" (mouseleave)="hideSvg(building.id)">
+                <td class="list-table-td" contenteditable="true">
+                  {{building.shortName}}
+                </td>
+                <td contenteditable="true">
+                  {{building.name}}
+                </td>
+                <td>
+                  <div class="flex-table-row-r-container del-svg del-svg-hide" id="{{building.id}}"
+                       (click)="removeBuilding(building.id)">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         aria-hidden="true"
+                         focusable="false" width="1.2rem" height="1.2rem"
+                         style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
+                         preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                      <path d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9m0 5h2v9H9V8m4 0h2v9h-2V8z"
+                            fill="#626262"/>
+                    </svg>
+                  </div>
+                </td>
+              </tr>
+            </ng-container>
+          </table>
+          <input class="new-discipline animation-02 input-hover" type="text" placeholder="+ Новый подобъект"
+                 style="cursor: pointer; width: fit-content;" (click)="modalHandler(addBuildingModal)">
+        </ng-template>
+      </li>
+      <li [ngbNavItem]="3">
+        <a ngbNavLink class="nav-link-config animation-02">Пользователи</a>
+        <ng-template ngbNavContent>
+
+
+          <div style="margin: 0 0 0 2rem;">
+            <div class="button-action animation-02" style="margin: 0.5rem 0;" data-toggle="modal"
+                 data-target="#newFolderModal" (click)="showAddUserModal(addUserModal)">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                   focusable="false" width="1.4rem" height="1.4rem"
+                   style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);
+                    vertical-align: middle;"
+                   preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                <path class="svg-action" d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" fill="#BFBDBF"/>
+              </svg>
+              <span class="span-action animation-02">Добавить пользователя</span>
+            </div>
+            <div class="button-action animation-02" style="margin: 0.5rem 0;" data-toggle="modal"
+                 data-target="#newFolderModal" (click)="showAddUserModal(updateUserModal)">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                   focusable="false" width="1.4rem" height="1.4rem"
+                   style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
+                   preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                <path class="svg-action"
+                      d="M2 17v3h8v-1.89H3.9V17c0-.64 3.13-2.1 6.1-2.1c.96.01 1.91.14 2.83.38l1.52-1.52c-1.4-.47-2.85-.73-4.35-.76c-2.67 0-8 1.33-8 4m8-13C7.79 4 6 5.79 6 8s1.79 4 4 4s4-1.79 4-4s-1.79-4-4-4m0 6c-1.1 0-2-.89-2-2s.9-2 2-2s2 .9 2 2s-.89 2-2 2m11.7 3.35l-1 1l-2.05-2l1-1a.55.55 0 0 1 .77 0l1.28 1.28c.21.21.21.56 0 .77M12 18.94l6.06-6.06l2.05 2l-6 6.07H12v-2.01"
+                      fill="#BFBDBF"/>
+              </svg>
+              <span class="span-action animation-02">Редактировать пользователя</span>
+            </div>
+            <div class="button-action animation-02" style="margin: 0.5rem 0;" (click)="refreshData('usersCondition')">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                   focusable="false" width="1.4rem" height="1.4rem"
+                   style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
+                   preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                <path
+                  d="M17.65 6.35A7.958 7.958 0 0 0 12 4a8 8 0 0 0-8 8a8 8 0 0 0 8 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0 1 12 18a6 6 0 0 1-6-6a6 6 0 0 1 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"
+                  fill="#BFBDBF" class="svg-action"/>
+              </svg>
+              <span class="span-action animation-02">Обновить список</span>
+            </div>
+
+            <table class="table table-store" style="font-size: 1rem; min-width: 60%; width: auto;">
+              <thead style="font-size: 0.7rem;">
+              <tr style="background-color: #ffffff">
+                <th style="width: 9rem; box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); border-bottom: none;"
+                    scope="row">
+                  Имя
+                </th>
+                <th
+                  style="width: 11rem; box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); border-bottom: none;"
+                  scope="row">
+                  Фамилия
+                </th>
+                <th
+                  style="width: 11rem; box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); border-bottom: none;"
+                  scope="row">
+                  Логин
+                </th>
+<!--                <th-->
+<!--                  style="width: 3.5rem; box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); border-bottom: none;"-->
+<!--                  scope="row">-->
+<!--                  Активен-->
+<!--                </th>-->
+                <th
+                  style="width: 8rem; box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1); border-bottom: none;"
+                  scope="row">
+                  Роли
+                </th>
+              </tr>
+              </thead>
+
+              <tbody style="font-size: 0.8rem;" *ngIf="usersCondition">
+              <ng-container *ngFor="let user of userArr">
+                <tr>
+                  <td style="border-top: 1px solid var(--lightest-grey);">
+                    {{user.name}}
+                  </td>
+                  <td style="border-top: 1px solid var(--lightest-grey);">
+                    {{user.surname}}
+                  </td>
+                  <td style="border-top: 1px solid var(--lightest-grey);">
+                    {{user.login}}
+                  </td>
+<!--                  <td style="text-align: center; border-top: 1px solid var(&#45;&#45;lightest-grey);">-->
+<!--                    <label for="user-enabled"></label>-->
+<!--                    <input type="checkbox" id="user-enabled" [checked]="user.firstFlag"-->
+<!--                           style="display: inline-block;" disabled>-->
+<!--                  </td>-->
+                  <td style="border-top: 1px solid var(--lightest-grey); padding: 0.2rem 0 0.2rem 0.5rem;">
+                    <div class="td-role">{{userRoleGet(user.id)}}</div>
+                  </td>
+                  <td class="button-delete animation-02" style="text-align:center; border-top: none;"
+                      (click)="removeUser(user.id)">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         aria-hidden="true"
+                         focusable="false" width="1rem" height="1rem" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);
+          vertical-align: middle" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                      <path class="svg-delete"
+                            d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9m0 5h2v9H9V8m4 0h2v9h-2V8z"
+                            fill="var(--light-grey-color)"/>
+                    </svg>
+                    <span class="span-delete animation-02">Удалить</span>
+                  </td>
+                </tr>
+              </ng-container>
+              </tbody>
+            </table>
+          </div>
+
+        </ng-template>
+      </li>
+      <li [ngbNavItem]="4">
+        <a ngbNavLink class="nav-link-config animation-02">Ед. измерения</a>
+        <ng-template ngbNavContent>
+          <table style="width: 25rem;">
+            <tr class="list-table-header-tr">
+              <th class="list-table-th">Сокращение</th>
+              <th class="list-table-th">Наименование</th>
+              <th></th>
+            </tr>
+            <tr class="list-table-item animation-02" style="font-size: 0.8rem" *ngFor="let d of uOm"
+                (mouseenter)="showSvg(d.id)" (mouseleave)="hideSvg(d.id)">
+              <td class="list-table-td" contenteditable="true">
+                {{d.shortName}}
+              </td>
+              <td class="list-table-td" style="width: fit-content;" contenteditable="true">
+                {{d.name}}
+              </td>
+              <td>
+                <div class="flex-table-row-r-container del-svg del-svg-hide" id="{{d.id}}">
+                  <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                       focusable="false" width="1.2rem" height="1.2rem"
+                       style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
+                       preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                    <path d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9m0 5h2v9H9V8m4 0h2v9h-2V8z"
+                          fill="#626262"/>
+                  </svg>
+                </div>
+              </td>
+            </tr>
+          </table>
+          <input class="new-discipline animation-02" type="text" placeholder="+ Новая ед. измерения">
+        </ng-template>
+      </li>
+    </ul>
+    <div [ngbNavOutlet]="nav"></div>
+  </div>
+</div>
+
+<!-- addUserModal -->
+<ng-template #addUserModal let-modal>
+  <div class="modal-header ap-modal-h">
+    <div class="modal-title" id="addUserModalTitle">
+      <h2>Добавить пользователя</h2>
+      <div>
+        Окно добавления нового пользователя.
+      </div>
+    </div>
+  </div>
+  <div class="modal-body modal-b" style="padding: 2rem 2rem 0.8rem 2rem;">
+    <div class="ap-modal-sub-container">
+      <form [formGroup]="userForm" (ngSubmit)="submitAddUser()" class="font-family">
+        <div class="progress form-group" *ngIf="progress > 0">
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width.%]="progress">
+          </div>
+        </div>
+        <div class="input-div" style="width: 14rem;">
+          <input type="text" name="username" id="username" autocomplete="off" placeholder="" formControlName="username"
+                 style="width: 14rem; margin-top: 0;">
+          <label for="username">ИМЯ</label>
+        </div>
+        <div class="input-div" style="width: 14rem;">
+          <input type="text" name="userSurName" id="userSurName" autocomplete="off" placeholder=""
+                 formControlName="userSurName"
+                 style="width: 14rem;">
+          <label for="userSurName">ФАМИЛИЯ</label>
+        </div>
+        <div class="input-div" style="width: 14rem;">
+          <input type="text" name="login" id="login" autocomplete="off" placeholder="" formControlName="login"
+                 style="width: 14rem;">
+          <label for="login">ЛОГИН</label>
+        </div>
+        <div class="input-div" style="width: 14rem;">
+          <label>ПОКАЗЫВАТЬ В НАЧАЛЕ ФАМИЛИЮ</label>
+        </div>
+        <div class="input-div" style="width: 14rem; margin: 0.5rem 0 0.5rem 0;">
+          <label class="switch" style="font-size: 0.8rem">
+            <input type="checkbox" name="isFirstFlag" id="isFirstFlag" formControlName="isFirstFlag">
+            <span class="slider round">
+                </span>
+          </label>
+          <label for="isFirstFlag"></label>
+        </div>
+        <div class="input-div" style="width: 14rem;">
+          <label>ПРИВИЛЕГИИ</label>
+        </div>
+        <div class="input-div" style="width: 14rem;">
+          <select name="role-select" id="role-select" formControlName="role" style="border: none;">
+            <option value="">не выбрано</option>
+            <option *ngFor="let role of allRoleGet()" value="{{role}}">
+              {{role}}
+            </option>
+          </select>
+          <label for="role-select"></label>
+        </div>
+        <div class="modal-footer modal-f" style="padding: 2rem 0 0 0;">
+          <button type="button" class="outline" value="Отмена" (click)="modal.close()">Закрыть</button>
+          <button class="default">Добавить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</ng-template>
+
+<!-- updateUserModal -->
+<ng-template #updateUserModal let-modal>
+  <div class="modal-header ap-modal-h">
+    <div class="modal-title" id="updateUserModalTitle">
+      <h2>Редактировать пользователя</h2>
+      <div>
+        Окно редактирования пользователей.
+      </div>
+    </div>
+  </div>
+  <div class="modal-body modal-b" style="padding: 2rem 2rem 0.8rem 2rem;">
+    <div class="ap-modal-sub-container">
+      <div class="progress form-group" *ngIf="progress > 0">
+        <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width.%]="progress">
+        </div>
+      </div>
+      <div style="text-align: center; margin-bottom: 1rem;">
+        <label style="font-size: 1rem; color: #8D929E; margin-right: 0.5rem;">ПОЛЬЗОВАТЕЛЬ</label>
+        <select name="user-select" id="user-select" #userSelect (change)="selectHandler(userSelect.value)"
+                style="border: none;display: inline-flex; min-width: 6.8rem;">
+          <option value="">не выбран</option>
+          <option *ngFor="let user of userArr" [value]="user.id">
+            {{user.login}}
+          </option>
+        </select>
+        <label for="user-select"></label>
+      </div>
+      <form [formGroup]="userUpdateForm" (ngSubmit)="submitUpdateUser(user.id)" class="font-family">
+        <div id="formGroupDisplay" class="animation-02" style="display: none;">
+          <div class="input-div" style="width: 14rem;">
+            <input type="text" name="userName" id="update-username" autocomplete="off" value="{{user.name}}"
+                   formControlName="userName"
+                   style="width: 14rem; margin-top: 0;">
+            <label for="update-username">ИМЯ</label>
+          </div>
+          <div class="input-div" style="width: 14rem;">
+            <input type="text" name="userSurName" id="update-userSurName" autocomplete="off" value="{{user.surname}}"
+                   formControlName="userSurName"
+                   style="width: 14rem;">
+            <label for="update-userSurName">ФАМИЛИЯ</label>
+          </div>
+          <div class="input-div" style="width: 14rem;">
+            <input type="text" name="login" id="update-login" autocomplete="off" value="{{user.login}}"
+                   formControlName="login"
+                   style="width: 14rem;">
+            <label for="update-login">ЛОГИН</label>
+          </div>
+
+          <div class="input-div" style="width: 14rem;">
+            <label for="isFirstName">ПОКАЗЫВАТЬ В НАЧАЛЕ ФАМИЛИЮ</label>
+          </div>
+          <div class="input-div" style="width: 14rem; margin: 0.5rem 0 0.5rem 0;">
+            <label class="switch" style="font-size: 0.8rem">
+              <input type="checkbox" name="isFirstName" id="isFirstName" formControlName="isFirstName"
+                     [checked]="user.firstFlag">
+              <span class="slider round">
+                </span>
+            </label>
+          </div>
+          <div class="input-div" style="width: 14rem;">
+            <label>ПРИВИЛЕГИИ</label>
+          </div>
+          <div class="input-div" style="width: 14rem;">
+            <select name="update-role-select" id="update-role-select" style="border: none;" #updateRoleSelect
+                    (change)="selectUpdateHandler(updateRoleSelect.value)">
+              <option value="">{{userRoleGet(user.id)}}</option>
+              <option *ngFor="let role of allRoleGet()" value="{{role}}">
+                {{role}}
+              </option>
+            </select>
+            <label for="update-role-select"></label>
+          </div>
+        </div>
+        <div class="modal-footer modal-f" style="padding: 2rem 0 0 0;">
+          <button type="button" class="outline" value="Закрыть" (click)="modal.close()">Закрыть</button>
+          <button class="default">Применить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</ng-template>
+
+<!-- addBuildingModal -->
+<ng-template #addBuildingModal let-modal>
+  <div class="modal-header ap-modal-h">
+    <div class="modal-title" id="addBuildingModalTitle">
+      <h2>Новый подобъект</h2>
+      <div>
+        Окно добавления нового подобъекта.
+      </div>
+    </div>
+  </div>
+  <div class="modal-body modal-b" style="padding: 2rem 0.8rem 0.8rem 2rem;">
+    <div class="ap-modal-sub-container">
+      <form [formGroup]="buildingForm" (ngSubmit)="submitAddBuilding()" class="font-family">
+        <div class="progress form-group" *ngIf="progress > 0">
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width.%]="progress">
+          </div>
+        </div>
+        <div class="input-div" style="width: 13rem;">
+          <input type="text" name="code" id="code" autocomplete="off" placeholder="" formControlName="code"
+                 style="width: 13rem; margin-top: 0;">
+          <label for="code">КОД</label>
+        </div>
+        <div class="input-div" style="width: 13rem;">
+          <input type="text" name="name" id="name" autocomplete="off" placeholder="" formControlName="name"
+                 style="width: 13rem;">
+          <label for="name">НАИМЕНОВАНИЕ</label>
+        </div>
+        <div class="modal-footer modal-f" style="padding: 2rem 0 0 0;">
+          <button type="button" class="outline" value="Отмена" (click)="modal.close()">Закрыть</button>
+          <button class="default">Добавить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</ng-template>
+

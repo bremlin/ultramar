@@ -1,0 +1,216 @@
+<div class="font-family">
+  <div style="margin: 0 3.2rem 0 3.2rem;">
+    <div style="border-bottom: 0.06rem solid #cccccc; padding: 0 0 0.3rem 0.5rem; font-size: 0.9rem; color: #8D929E;">
+      <!--      <div class="animation-02" style="cursor: pointer; width: fit-content;"-->
+      <!--           id="{{folder.storeFolderName}}" (click)="changeFolder($event)">-->
+      <!--      </div>-->
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item animation-02" (click)="showPreviousFolder($event)"
+              *ngFor="let breadcrumb of breadcrumbsHandler('all')" id="{{breadcrumb.parentId}}">
+            {{breadcrumb.docName}}
+          </li>
+        </ol>
+      </nav>
+    </div>
+    <div style="margin: 0 0 0 2rem;">
+      <div class="button-action animation-02" style="margin: 0.5rem 0;" data-toggle="modal"
+           data-target="#addFolderModal"
+           (click)="showModal(addFolderModal)">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+             focusable="false" width="1.4rem" height="1.4rem" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);
+           vertical-align: middle;" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+          <path
+            d="M10 4l2 2h8a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6c0-1.11.89-2 2-2h6m5 5v3h-3v2h3v3h2v-3h3v-2h-3V9h-2z"
+            fill="#BFBDBF" class="svg-action"/>
+        </svg>
+        <span class="span-action animation-02">Добавить папку</span>
+      </div>
+      <div class="button-action animation-02" style="margin: 0.5rem 0;" data-toggle="modal"
+           data-target="#uploadFileModal"
+           (click)="showModal(uploadFileModal)">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+             focusable="false" width="1.4rem" height="1.4rem" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);
+           vertical-align: middle;" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+          <path d="M9 16v-6H5l7-7l7 7h-4v6H9m-4 4v-2h14v2H5z"
+                fill="#BFBDBF" class="svg-action"/>
+        </svg>
+        <span class="span-action animation-02">Загрузить файл</span>
+      </div>
+      <div class="button-action animation-02" style="margin: 0.5rem 0;" (click)="refreshData()">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+             focusable="false" width="1.4rem" height="1.4rem"
+             style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
+             preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+          <path
+            d="M17.65 6.35A7.958 7.958 0 0 0 12 4a8 8 0 0 0-8 8a8 8 0 0 0 8 8c3.73 0 6.84-2.55 7.73-6h-2.08A5.99 5.99 0 0 1 12 18a6 6 0 0 1-6-6a6 6 0 0 1 6-6c1.66 0 3.14.69 4.22 1.78L13 11h7V4l-2.35 2.35z"
+            fill="#BFBDBF" class="svg-action"/>
+        </svg>
+        <span class="span-action animation-02">Обновить хранилище</span>
+      </div>
+      <table class="table table-store" style="font-size: 1rem; min-width: 60%; width: auto;">
+        <thead style="font-size: 0.7rem;">
+        <tr style="background-color: #ffffff">
+          <th style="width: 3.5rem; box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);" scope="row">Тип</th>
+          <th style="width: 20rem; border-left: 1px solid #dee2e6; box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);"
+              scope="row">Название
+          </th>
+          <th style="width: 9rem; border-left: 1px solid #dee2e6; box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);"
+              scope="row">Дата добавления
+          </th>
+          <th style="width: 13rem; border-left: 1px solid #dee2e6; box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);">
+            Автор
+          </th>
+        </tr>
+        </thead>
+        <tbody style="font-size: 0.8rem;">
+
+        <ng-container *ngIf="condition" #elem>
+          <tr (click)="showPreviousFolder($event)" style="cursor: pointer; display: none;" class="animation-02"
+              id="previous-row">
+            <td style="text-align: center;">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                   focusable="false" width="1.2rem" height="1.2rem"
+                   style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
+                   preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                <path d="M20 11v2H8l5.5 5.5l-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5L8 11h12z" fill="#626262"/>
+              </svg>
+            </td>
+            <td>Назад</td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr *ngFor="let folders of folderUpdater()" [attr.id]="folders.id">
+            <td style="text-align:center;">
+              <div *ngIf="folders.file === false; then thenBlock else elseBlock" style="display: none;"></div>
+              <ng-template #thenBlock>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                     focusable="false" width="1.2rem" height="1.2rem"
+                     style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
+                     preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                  <path d="M10 4H4c-1.11 0-2 .89-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V8a2 2 0 0 0-2-2h-8l-2-2z"
+                        fill="#F8CC41"/>
+                </svg>
+              </ng-template>
+              <ng-template #elseBlock>
+                <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                     focusable="false" width="1.2rem" height="1.2rem"
+                     style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);"
+                     preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                  <path d="M13 9V3.5L18.5 9M6 2c-1.11 0-2 .89-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6H6z"
+                        fill="var(--light-blue-color)"/>
+                </svg>
+              </ng-template>
+            </td>
+            <td class="select-td" id="{{folders.id}}" (click)="rowClickHandler($event)">
+              {{folders.origName}}
+            </td>
+            <td>
+              {{folders.uploadDate}}
+            </td>
+            <td>
+              {{folders.author}}
+            </td>
+            <td class="button-delete animation-02" style="text-align:center; border-top: none;"
+                (click)="removeFolder(folders.id)">
+              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"
+                   focusable="false" width="1rem" height="1rem" style="-ms-transform: rotate(360deg); -webkit-transform: rotate(360deg); transform: rotate(360deg);
+          vertical-align: middle" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24">
+                <path class="svg-delete"
+                      d="M9 3v1H4v2h1v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6h1V4h-5V3H9m0 5h2v9H9V8m4 0h2v9h-2V8z"
+                      fill="var(--light-grey-color)"/>
+              </svg>
+              <span class="span-delete animation-02">Удалить</span>
+            </td>
+          </tr>
+          <tr></tr>
+        </ng-container>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- addFolderModal -->
+<ng-template #addFolderModal let-modal>
+  <div class="modal-header ap-modal-h">
+    <div class="modal-title" id="addFolderModalTitle">
+      <h2>Добавить папку</h2>
+      <div>
+        При добавлении новой папки, требуется указать её название.
+      </div>
+    </div>
+  </div>
+  <div class="modal-body modal-b">
+    <div class="ap-modal-sub-container">
+      <div class="input-div" style="width: 12rem;">
+        <input type="text" name="folderName" id="folderName" autocomplete="off" placeholder=""
+               style="width: 12rem; margin-top: 0;"
+               [(ngModel)]="folder.folderName" #folderName="ngModel" required>
+        <div [hidden]="folderName.valid || folderName.untouched" style="display: inline-block; color: #d50000">Не
+          указано название
+        </div>
+        <label for="folderName">НАЗВАНИЕ</label>
+      </div>
+    </div>
+  </div>
+  <div class="modal-footer modal-f">
+    <button type="button" class="outline" value="Отмена" (click)="modal.close('Close click')">Отмена</button>
+    <button type="submit" class="default" value="Добавить" id="add-button"
+            [disabled]="folderName.invalid"
+            [ngClass]="{'disabled': disabled}" (click)="modal.close(); addFolder();">Добавить
+    </button>
+  </div>
+</ng-template>
+
+<!-- uploadFileModal -->
+<ng-template #uploadFileModal let-modal>
+  <div class="modal-header ap-modal-h">
+    <div class="modal-title" id="uploadFileModalTitle">
+      <h2>Загрузить файл</h2>
+      <div>
+        При добавлении нового файла, рекомендуется учитывать размер самого файла.
+      </div>
+    </div>
+  </div>
+  <div class="modal-body modal-b">
+    <div class="ap-modal-sub-container">
+
+      <form [formGroup]="form" (ngSubmit)="submitUser()" class="font-family">
+
+        <!-- Progress Bar -->
+        <div class="progress form-group" *ngIf="progress > 0">
+          <div class="progress-bar progress-bar-striped bg-success" role="progressbar" [style.width.%]="progress">
+          </div>
+        </div>
+
+        <div class="input-div" style="width: 100%;">
+          <label>ИМЯ ФАЙЛА</label>
+        </div>
+        <div class="form-group input-group-lg" style="margin-bottom: 0">
+          <input class="form-control" placeholder="" id="fileName" formControlName="name" style="font-size: 0.8rem">
+          <label for="fileName"></label>
+        </div>
+
+        <div class="input-div" style="width: 100%;">
+          <label>ФАЙЛ ДЛЯ ЗАГРУЗКИ</label>
+        </div>
+        <div class="form-group" style="margin-bottom: 2rem;">
+          <input type="file" (change)="uploadFile($event)" style="font-size: 0.9rem">
+        </div>
+
+        <div class="form-group">
+          <button class="default" style="width: 100%">Загрузить</button>
+        </div>
+      </form>
+
+      <!--      <div class="input-div" style="width: 12rem;">-->
+      <!--    </div>-->
+    </div>
+  </div>
+  <div class="modal-footer modal-f">
+    <button type="button" class="outline" value="Отмена" (click)="modal.close()">Закрыть</button>
+    <!--    <button type="submit" class="default" value="Добавить" id="upload-file-button">Загрузить-->
+    <!--    </button>-->
+  </div>
+</ng-template>
