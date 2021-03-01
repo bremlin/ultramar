@@ -58,7 +58,7 @@ public class GorikSequenceController {
         Collections.sort(sequenceList);
 
         String[] months = new DateFormatSymbols().getMonths();
-        System.out.println("test");
+        System.out.println("tes");
 
 
         return done;
