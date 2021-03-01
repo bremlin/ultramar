@@ -21,7 +21,7 @@ public class User extends ResponseObject{
     public User(ResultSet rs) throws SQLException {
         this.id = rs.getInt("id");
         this.login = rs.getString("login");
-        this.name = rs.getString("name");
+        this.name = rs.getString("user_name");
     }
 
     public User(Integer id, ResultSet rs) throws SQLException {
