@@ -15,7 +15,6 @@ public class User extends ResponseObject{
         this.id = id;
         this.login = login;
         this.name = login;
-
     }
 
     public User(ResultSet rs) throws SQLException {

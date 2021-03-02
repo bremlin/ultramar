@@ -9,6 +9,7 @@ import {HttpEvent, HttpEventType} from '@angular/common/http';
 import * as moment from 'moment';
 import {DataSet, Timeline} from 'vis';
 import { ContextMenuModule } from 'ngx-contextmenu';
+import {MatCardModule} from '@angular/material/card';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {
   CalendarEvent,
@@ -46,7 +47,7 @@ import {FormGroup} from '@angular/forms';
     // DemoUtilsModule,
   ],
   // declarations: [DemoComponent],
-  // exports: [DemoComponent],
+  exports: [MatCardModule]
 })
 export class MyModule {}
 
@@ -62,7 +63,6 @@ export class DashboardComponent implements OnInit {
 
   condition = true;
   selectedKey: string;
-  createSequenceForm: FormGroup;
 
 
   constructor(
@@ -70,8 +70,8 @@ export class DashboardComponent implements OnInit {
     private titleService: Title,
     private router: Router,
     private authService: AuthService,
-    private dashboardService: DashboardService
-  ) {
+    private dashboardService: DashboardService,
+) {
   }
 
   today: number = Date.now();
@@ -104,14 +104,18 @@ export class DashboardComponent implements OnInit {
   volChartCondition = true;
   view: CalendarView = CalendarView.Month;
   viewDate: Date = new Date();
+  eventsLoad = [];
+  event;
+  date;
 
-  events: CalendarEvent[] = [
-    {
-      start: new Date(),
-      title: 'A 3 day event',
-      draggable: true,
-    }
-  ];
+  // events: CalendarEvent[] = [
+  //   {
+  //     start: new Date(),
+  //     title: 'A 3 day event',
+  //     draggable: true,
+  //   }
+  // ];
+  events: CalendarEvent[] = [];
 
   refresh: Subject<any> = new Subject();
 
@@ -127,6 +131,27 @@ export class DashboardComponent implements OnInit {
     // this.refresh.next();
   }
   ngOnInit(): void {
+    this.dashboardService.postGetGorikQuery().subscribe(
+      (response) => {
+        this.eventsLoad = JSON.parse(JSON.stringify(response, null, 1));
+        // tslint:disable-next-line:prefer-for-of
+        for (let i = 0; i < this.eventsLoad.length; i++) {
+          this.date = new Date(this.eventsLoad[i].gorikDate);
+          this.events.push({
+            start: this.date,
+            title: this.eventsLoad[i].userName
+          });
+          if (this.date = this.viewDate) {
+            this.event = this.events[this.events.length - 1];
+          }
+        }
+        this.refresh.next();
+        console.log(this.eventsLoad);
+
+      },
+      (error) => console.log('config.component.ts: ' + error)
+    );
+    this.refresh.next();
     //
     this.titleService.setTitle(this.mainTitle);
     //
@@ -141,134 +166,146 @@ export class DashboardComponent implements OnInit {
     this.volChartColorMap.set(1, '#8ea8d8');
     this.volChartColorMap.set(2, '#3374b1');
     // Виджет VOL
-    this.dashboardService.postVolData().subscribe((event: HttpEvent<any>) => {
-        if (event.type === HttpEventType.Response) {
-          this.volWidgetData = event.body;
+    console.log('loadquery');
+    // this.dashboardService.postGetGorikQuery().subscribe((event: HttpEvent<any>) => {
+    //     if (event.type === HttpEventType.Response) {
+    //       console.log('is ok');
+    //       this.eventsLoad = event.body;
+    //       console.log(this.eventsLoad);
+    //     }
+    //   }, (error) => {
+    //     console.log(error);
+    //   }
+    // );
 
-          for (const i of this.volWidgetData) {
-            this.keyWidgetNames.add(i.objectName);
-            this.keyWidgetDiscipline.add(i.disciplineName);
-            if (this.keyWidgetValues.has(i.disciplineName)) {
-              this.keyWidgetValues.get(i.disciplineName).push(i.factPercent);
-            } else {
-              const array = [];
-              array.push(i.factPercent);
-              this.keyWidgetValues.set(i.disciplineName, array);
-            }
-          }
-
-          const typeVol = Array.from(this.keyWidgetNames.keys());
-
-          this.volChart = new Chart(document.getElementById('vol-chart'), {
-            type: 'bar',
-            data: {
-              labels: Array.from(typeVol),
-              datasets: [{
-                  data: this.keyWidgetValues.get('ПИР'),
-                  backgroundColor: this.volChartBgColor[0],
-                  label: 'ПИР',
-                },
-                {
-                  data: this.keyWidgetValues.get('МТО'),
-                  backgroundColor: this.volChartBgColor[1],
-                  label: 'МТО',
-                },
-                {
-                  data: this.keyWidgetValues.get('СМР'),
-                  backgroundColor: this.volChartBgColor[2],
-                  label: 'СМР',
-                  fontFamily: 'customWebFont, customWebFont2, sans-serif'
-                }],
-            },
-            options: {
-              legend: {
-                position: 'bottom',
-                labels: {
-                  fontFamily: 'customWebFont, customWebFont2, sans-serif'
-                }
-              },
-              barWidth: 50,
-              responsive: true,
-              maintainAspectRatio: false,
-              scales: {
-                yAxes: [{
-                  ticks: {
-                    beginAtZero: true,
-                    min: 0,
-                    max: 100,
-                    fontFamily: 'customWebFont, customWebFont2, sans-serif'
-                  }
-                }],
-                xAxes: [{
-                  display: true,
-                  gridLines: {
-                    drawBorder: true,
-                    display: false
-                  },
-                  ticks: {
-                    fontFamily: 'customWebFont, customWebFont2, sans-serif'
-                  }
-                }]
-              }
-              // onClick: () => {}
-            }
-          });
-        }
-        this.volChartCondition = false;
-      }, (error) => {
-        console.log(error);
-      }
-    );
-    // Виджет SMR
-    this.dashboardService.postSmrData().subscribe((event: HttpEvent<any>) => {
-        if (event.type === HttpEventType.Response) {
-
-          for (const i of event.body) {
-            this.smrWidgetValues.set(i.objectName, i);
-          }
-          this.targetSmrWidgetElem = event.body;
-          // Запись начального имени объекта
-          this.targetObjectName = this.targetSmrWidgetElem[0].objectName;
-          // Запись начального отклонения
-          this.targetDeviation = this.targetSmrWidgetElem[0].deviationPercent;
-          // Запись начального ПЛАН ФАКТ
-          this.targetPlan = this.targetSmrWidgetElem[0].planPercent;
-          this.targetFact = this.targetSmrWidgetElem[0].factPercent;
-          // Вычисление начального остатка
-          this.targetPlanResidue = 100 - this.targetPlan;
-          this.targetFactResidue = 100 - this.targetFact - -this.targetDeviation;
-          // Отрисовка SMR chart
-          this.drawSmrChart();
-        }
-      }, (error) => {
-        console.log(error);
-      }
-    );
-    // Виджет KEY
-    this.dashboardService.postKeyData().subscribe((event: HttpEvent<any>) => {
-        if (event.type === HttpEventType.Response) {
-          this.keyWidgetData = event.body;
-
-          // DOM element where the Timeline will be attached
-          this.keyChartContainer = document.getElementById('key-chart-container');
-          // Create a DataSet (allows two way data-binding)
-          this.keyChartItems = new DataSet([
-            {id: 1, content: 'Старт работ', start: '12-12-2019'},
-            {id: 2, content: 'Окончание работ', start: '12-12-2020'},
-          ]);
-          // Configuration for the Timeline
-          this.keyChartOptions = {
-            locale: 'ru',
-            showCurrentTime: false
-          };
-          // Create a Timeline
-          this.keyChart = new Timeline(this.keyChartContainer, this.keyChartItems, this.keyChartOptions);
-          this.keyChartCondition = false;
-        }
-      }, (error) => {
-        console.log(error);
-      }
-    );
+    // this.dashboardService.postVolData().subscribe((event: HttpEvent<any>) => {
+    //     if (event.type === HttpEventType.Response) {
+    //       this.volWidgetData = event.body;
+    //
+    //       for (const i of this.volWidgetData) {
+    //         this.keyWidgetNames.add(i.objectName);
+    //         this.keyWidgetDiscipline.add(i.disciplineName);
+    //         if (this.keyWidgetValues.has(i.disciplineName)) {
+    //           this.keyWidgetValues.get(i.disciplineName).push(i.factPercent);
+    //         } else {
+    //           const array = [];
+    //           array.push(i.factPercent);
+    //           this.keyWidgetValues.set(i.disciplineName, array);
+    //         }
+    //       }
+    //
+    //       const typeVol = Array.from(this.keyWidgetNames.keys());
+    //
+    //       this.volChart = new Chart(document.getElementById('vol-chart'), {
+    //         type: 'bar',
+    //         data: {
+    //           labels: Array.from(typeVol),
+    //           datasets: [{
+    //               data: this.keyWidgetValues.get('ПИР'),
+    //               backgroundColor: this.volChartBgColor[0],
+    //               label: 'ПИР',
+    //             },
+    //             {
+    //               data: this.keyWidgetValues.get('МТО'),
+    //               backgroundColor: this.volChartBgColor[1],
+    //               label: 'МТО',
+    //             },
+    //             {
+    //               data: this.keyWidgetValues.get('СМР'),
+    //               backgroundColor: this.volChartBgColor[2],
+    //               label: 'СМР',
+    //               fontFamily: 'customWebFont, customWebFont2, sans-serif'
+    //             }],
+    //         },
+    //         options: {
+    //           legend: {
+    //             position: 'bottom',
+    //             labels: {
+    //               fontFamily: 'customWebFont, customWebFont2, sans-serif'
+    //             }
+    //           },
+    //           barWidth: 50,
+    //           responsive: true,
+    //           maintainAspectRatio: false,
+    //           scales: {
+    //             yAxes: [{
+    //               ticks: {
+    //                 beginAtZero: true,
+    //                 min: 0,
+    //                 max: 100,
+    //                 fontFamily: 'customWebFont, customWebFont2, sans-serif'
+    //               }
+    //             }],
+    //             xAxes: [{
+    //               display: true,
+    //               gridLines: {
+    //                 drawBorder: true,
+    //                 display: false
+    //               },
+    //               ticks: {
+    //                 fontFamily: 'customWebFont, customWebFont2, sans-serif'
+    //               }
+    //             }]
+    //           }
+    //           // onClick: () => {}
+    //         }
+    //       });
+    //     }
+    //     this.volChartCondition = false;
+    //   }, (error) => {
+    //     console.log(error);
+    //   }
+    // );
+    // // Виджет SMR
+    // this.dashboardService.postSmrData().subscribe((event: HttpEvent<any>) => {
+    //     if (event.type === HttpEventType.Response) {
+    //
+    //       for (const i of event.body) {
+    //         this.smrWidgetValues.set(i.objectName, i);
+    //       }
+    //       this.targetSmrWidgetElem = event.body;
+    //       // Запись начального имени объекта
+    //       this.targetObjectName = this.targetSmrWidgetElem[0].objectName;
+    //       // Запись начального отклонения
+    //       this.targetDeviation = this.targetSmrWidgetElem[0].deviationPercent;
+    //       // Запись начального ПЛАН ФАКТ
+    //       this.targetPlan = this.targetSmrWidgetElem[0].planPercent;
+    //       this.targetFact = this.targetSmrWidgetElem[0].factPercent;
+    //       // Вычисление начального остатка
+    //       this.targetPlanResidue = 100 - this.targetPlan;
+    //       this.targetFactResidue = 100 - this.targetFact - -this.targetDeviation;
+    //       // Отрисовка SMR chart
+    //       this.drawSmrChart();
+    //     }
+    //   }, (error) => {
+    //     console.log(error);
+    //   }
+    // );
+    // // Виджет KEY
+    // this.dashboardService.postKeyData().subscribe((event: HttpEvent<any>) => {
+    //     if (event.type === HttpEventType.Response) {
+    //       this.keyWidgetData = event.body;
+    //
+    //       // DOM element where the Timeline will be attached
+    //       this.keyChartContainer = document.getElementById('key-chart-container');
+    //       // Create a DataSet (allows two way data-binding)
+    //       this.keyChartItems = new DataSet([
+    //         {id: 1, content: 'Старт работ', start: '12-12-2019'},
+    //         {id: 2, content: 'Окончание работ', start: '12-12-2020'},
+    //       ]);
+    //       // Configuration for the Timeline
+    //       this.keyChartOptions = {
+    //         locale: 'ru',
+    //         showCurrentTime: false
+    //       };
+    //       // Create a Timeline
+    //       this.keyChart = new Timeline(this.keyChartContainer, this.keyChartItems, this.keyChartOptions);
+    //       this.keyChartCondition = false;
+    //     }
+    //   }, (error) => {
+    //     console.log(error);
+    //   }
+    // );
     this.init();
   }
 

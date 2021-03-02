@@ -32,6 +32,7 @@ import {SubModelComponent} from './model/sub-model/sub-model.component';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import {ContextMenuModule} from 'ngx-contextmenu';
+import {MatCardModule} from '@angular/material/card';
 
 // the second parameter 'ru' is optional
 registerLocaleData(localeRu, 'ru');
@@ -61,7 +62,8 @@ registerLocaleData(localeRu, 'ru');
         HttpClientModule,
         ReactiveFormsModule,
         CalendarModule.forRoot({provide: DateAdapter, useFactory: adapterFactory}),
-        ContextMenuModule
+        ContextMenuModule,
+        MatCardModule
     ],
   providers: [
     DataService,

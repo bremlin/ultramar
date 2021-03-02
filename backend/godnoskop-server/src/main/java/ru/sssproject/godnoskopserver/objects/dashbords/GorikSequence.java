@@ -1,11 +1,14 @@
 package ru.sssproject.godnoskopserver.objects.dashbords;
 
+import java.sql.Connection;
 import java.sql.Date;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.sql.Timestamp;
 import java.util.HashSet;
 import ru.sssproject.godnoskopserver.objects.ResponseObject;
+import ru.sssproject.godnoskopserver.sql.SqlConnector;
 
 public class GorikSequence extends ResponseObject {
 
@@ -49,6 +52,25 @@ public class GorikSequence extends ResponseObject {
         }
         if (columns.contains("author_name")) {
             this.authorName = rs.getString("author_name");
+        }
+    }
+
+    public GorikSequence() {
+
+    }
+
+    public void save() {
+        try (Connection connection = SqlConnector.ConnectDb(SqlConnector.DB.Godnoskop)) {
+            Statement statement = connection.createStatement();
+            String query = String.format("insert into \"gorik_sequence\" (id, user_id, gorik_date, user_name) values (default, %s, '%s', '%s')", userId, gorikDate, userName);
+            System.out.println(query);
+            statement.execute(query);
+//            while (resultSet.next()) {
+//                return resultSet.getBoolean(1);
+//            }
+            statement.close();
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
     }
 

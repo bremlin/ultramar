@@ -31,6 +31,7 @@ export class DashboardService {
 
   postGetGorikQuery(): Observable<any> {
     const body = {};
+    console.log(this.GORIK_QUERY_URL);
     return this.http.post(this.GORIK_QUERY_URL, body, this.httpOptionsJs)
       .pipe(
         catchError(this.errorManager)

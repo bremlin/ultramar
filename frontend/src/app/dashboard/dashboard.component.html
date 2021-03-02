@@ -85,18 +85,21 @@
               *ngSwitchCase="'month'"
               [viewDate]="viewDate"
               [events]="events"
+              [refresh]="refresh"
               [cellTemplate]="customCellTemplate"
             >
             </mwl-calendar-month-view>
             <mwl-calendar-week-view
               *ngSwitchCase="'week'"
               [viewDate]="viewDate"
+              [refresh]="refresh"
               [events]="events"
             >
             </mwl-calendar-week-view>
             <mwl-calendar-day-view
               *ngSwitchCase="'day'"
               [viewDate]="viewDate"
+              [refresh]="refresh"
               [events]="events"
             >
             </mwl-calendar-day-view>
@@ -109,6 +112,21 @@
         <div class="shadow-md p-3 bg-white rounded-md h-100 w-100">
           <div style="font-size: 0.9rem; font-weight: bold; padding: 0 0 0.5rem 0;">
             А годноскоп сегодня пишет:
+            <mat-card class="example-card">
+              <mat-card-header>
+                <div mat-card-avatar class="example-header-image"></div>
+                <mat-card-title>{{this.event.title}}</mat-card-title>
+<!--                <mat-card-subtitle>Dog Breed</mat-card-subtitle>-->
+              </mat-card-header>
+<!--              <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">-->
+<!--              <mat-card-content>-->
+<!--                <p>-->
+<!--                  The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.-->
+<!--                  A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally-->
+<!--                  bred for hunting.-->
+<!--                </p>-->
+<!--              </mat-card-content>-->
+            </mat-card>
 <!--            <a routerLink="/report" title="Отчёты" class="svg-hover" style="float: right;">-->
 <!--              <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true"-->
 <!--                   focusable="false" width="1.2rem" height="1.2rem"-->
