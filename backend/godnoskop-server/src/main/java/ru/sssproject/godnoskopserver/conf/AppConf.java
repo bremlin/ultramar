@@ -13,9 +13,9 @@ public class AppConf implements WebMvcConfigurer {
                         "http://localhost:8080",
                         "http://godnoskop.sssproject.ru/",
                         "http://godnoskop.sssproject.ru:4200",
-                        "http://godnoskop.sssproject.ru:8080/",
+                        "http://godnoskop.sssproject.ru:8080/")
 //                        "http://f.ibcon.ru:4200",
-                        "http://app.sssproject.ru:8080/")
+//                        "http://app.sssproject.ru:8080/")
                 .allowedMethods("GET", "POST");
     }
 }

@@ -141,7 +141,7 @@ export class DashboardComponent implements OnInit {
             start: this.date,
             title: this.eventsLoad[i].userName
           });
-          if (this.date = this.viewDate) {
+          if (this.date === this.viewDate) {
             this.event = this.events[this.events.length - 1];
           }
         }
